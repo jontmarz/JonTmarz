@@ -119,6 +119,18 @@
           name: 'Laravel',
           value: 50,
         },
+        {
+          name: 'SQL',
+          value: 50,
+        },
+        {
+          name: 'NodeJS',
+          value: 30,
+        },
+        {
+          name: 'NoSQL',
+          value: 30,
+        },
       ],
     }),
   }

@@ -5,11 +5,11 @@
   >
     <v-row no-gutters>
       <v-col
-        class="hidden-sm-and-down"
+        class=""
         md="6"
       >
         <v-img
-          :src="require('@/assets/welcome.png')"
+          :src="require('@/assets/welcome.jpg')"
           height="100vh"
         />
       </v-col>
