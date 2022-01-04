@@ -1,5 +1,5 @@
 <template>
-  <div class="my-10">
+  <div class="mb-10">
     <v-btn
       v-for="(item, i) in items.slice(0, large ? items.length : 3)"
       :key="i"

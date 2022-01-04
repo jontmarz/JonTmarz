@@ -31,7 +31,7 @@
           </base-subheading>
 
           <base-text class="mb-5">
-            Mis habilidades incluyen experiencia en HTML, SASS, MySQL, MongoDB, PHP y NodeJS.
+            Mis habilidades incluyen experiencia en HTML, SASS, SQL, NoSql, PHP y JavaScript.
           </base-text>
 
           <v-alert
@@ -109,7 +109,7 @@
       skills: [
         {
           name: 'WordPress',
-          value: 70,
+          value: 80,
         },
         {
           name: 'Vue',
@@ -120,16 +120,32 @@
           value: 50,
         },
         {
-          name: 'SQL',
+          name: 'MySQL',
           value: 50,
         },
         {
-          name: 'NodeJS',
+          name: 'MongoDb',
           value: 30,
+        },
+        {
+          name: 'Firebase',
+          value: 60,
         },
         {
           name: 'NoSQL',
           value: 30,
+        },
+        {
+          name: 'Web Services',
+          value: 40,
+        },
+        {
+          name: 'Moodle',
+          value: 60,
+        },
+        {
+          name: 'Prestashop',
+          value: 60,
         },
       ],
     }),

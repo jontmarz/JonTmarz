@@ -31,7 +31,8 @@
                 v-for="(project, i) in projects"
                 :key="i"
                 cols="12"
-                md="6"
+                sm="6"
+                md="4"
               >
                 <!-- <a
                   :href="`https://${project.url}`"
@@ -49,7 +50,7 @@
                     target="_blank"
                   >
                     <v-img
-                      :src="require(`@/assets/projects/${project.img}.png`)"
+                      :src="require(`@/assets/projects/${project.img}.webp`)"
                       max-height="300"
                       :aspect-ratio="16/9"
                     >
@@ -91,6 +92,26 @@
     data: () => ({
       projects: [
         {
+          img: 'lecafe',
+          url: 'lecaferd.com.do',
+          txt: 'Tienda de Café<br>2021',
+        },
+        {
+          img: 'ceniflores',
+          url: 'ceniflores.org',
+          txt: 'Agremiación del sector Floricultor<br>2021',
+        },
+        {
+          img: 'beliving',
+          url: 'beliving.rxp.jfc.mybluehost.me',
+          txt: 'Compañía Co-living<br>2021',
+        },
+        {
+          img: 'argolider',
+          url: 'argolider.rxp.jfc.mybluehost.me',
+          txt: 'Compañía constructora<br>2021',
+        },
+        {
           img: 'fresar',
           url: 'fresaringenieros.co',
           txt: 'Empresa de ingenieros de pavimentos<br>2021',
@@ -111,21 +132,6 @@
           txt: 'Agremiación del sector floricultor<br>2021',
         },
         {
-          img: 'portal40',
-          url: 'portal40.com',
-          txt: 'Constructora<br>2020',
-        },
-        {
-          img: 'valenti',
-          url: 'proyectovalenti.com',
-          txt: 'Constructora<br>2020',
-        },
-        {
-          img: 'turpial',
-          url: 'reservadelturpial.com',
-          txt: 'Constructora<br>2020',
-        },
-        {
           img: 'arrigui',
           url: 'arrigui.com',
           txt: 'Firma de abogados y auditores<br>2021',
@@ -139,6 +145,21 @@
           img: 'quality',
           url: 'qualitycreationsagency.com',
           txt: 'Agencia de publicidad<br>2021',
+        },
+        {
+          img: 'portal40',
+          url: 'portal40.com',
+          txt: 'Constructora<br>2020',
+        },
+        {
+          img: 'valenti',
+          url: 'proyectovalenti.com',
+          txt: 'Constructora<br>2020',
+        },
+        {
+          img: 'turpial',
+          url: 'reservadelturpial.com',
+          txt: 'Constructora<br>2020',
         },
       ],
     }),
