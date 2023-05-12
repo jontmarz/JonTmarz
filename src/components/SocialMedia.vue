@@ -37,7 +37,7 @@
         {
           name: 'Git Hub',
           icon: 'mdi-github-circle',
-          url: 'https://github.com/Jonedi',
+          url: 'https://github.com/jontmarz',
         },
         {
           name: 'YouTube',
