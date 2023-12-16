@@ -29,7 +29,7 @@
 
     data: () => ({
       items: [
-        {
+        /* {
           name: 'LinkedIn',
           icon: 'mdi-linkedin',
           url: 'https://www.linkedin.com/in/john-tmarz/',
@@ -58,7 +58,7 @@
           name: 'Facebook',
           icon: 'mdi-facebook',
           url: 'https://www.facebook.com/Ing.Johntorres',
-        },
+        }, */
       ],
     }),
   }
