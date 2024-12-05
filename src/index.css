@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #00000F;
+  --color-secondary: #CCA70A;
+  --color-tertiary: #C0C0C0;
+  --color-accent: #2A002B;
+  --color-highlight: #00AAFF;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  @apply bg-[#00000F] text-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
+}
+
+.section-padding {
+  @apply py-20 px-4 md:px-8 lg:px-16;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#CCA70A] to-[#00AAFF];
+}
+
+.btn-primary {
+  @apply bg-[#CCA70A] hover:bg-[#00AAFF] text-white px-6 py-2 rounded-lg transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-[#CCA70A] text-[#CCA70A] hover:bg-[#CCA70A] hover:text-white px-6 py-2 rounded-lg transition-all duration-300;
+}
+
+.flex-col { flex-direction: column; }
+
+#hero {
+  &.bg-hero {
+    background-image: url('/src/assets/bg-tool-developer.webp');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+#services {
+  &.bg-services {
+    background-image: url('/src/assets/bg-developer-break.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-card-services {
+    background-color: rgb(204, 167, 10, 15%);
+    &:hover {
+      background-color: #2A002B;
+    }
+  }
+
+}
