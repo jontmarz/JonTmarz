@@ -51,7 +51,7 @@ export default {
         description: "Construyo aplicaciones web interactivas y de alto rendimiento, adaptadas a tus necesidades y listas para impulsar la productividad y la experiencia del usuario."
       },
       consulting: {
-        title: "Consultoría de Desarrollo de Aplicaciones",
+        title: "Consultoría en Desarrollo de Aplicaciones",
         description: "Te ayudo a planificar, diseñar e implementar soluciones tecnológicas efectivas. Desde la conceptualización hasta la ejecución, optimizo tus recursos y garantizo el éxito del proyecto."
       }
     }
@@ -109,13 +109,17 @@ export default {
         title: "ResearchPro",
         description: "Desarrollo de aplicación de gestión de proyectos de investigación, diseñada para optimizar el flujo de trabajo y la colaboración académica."
       }
+    },
+    jontmarz: {
+      title: "Jon Tmarz",
+      description: "Desarrollo de sitio web personal Actualizado con sección de blog."
     }
   },
   buttons: {
-    hero: 'Conecta conmigo',
-    about: 'Agenda una consulta',
-    service: 'Comencemos tu proyecto',
-    portfolio: 'Contáctame',
+    hero: "Conecta conmigo",
+    about: "Agenda una consulta",
+    service: "Comencemos tu proyecto",
+    portfolio: "Contáctame",
     downloadCV: "Descargar CV",
     sendMessage: "Enviar Mensaje",
     viewProject: "Ver Proyecto"
@@ -129,16 +133,22 @@ export default {
       email: "Correo",
       phone: "Teléfono",
       message: "Mensaje",
-      button: 'Enviar',
+      button: "Enviar",
       ht: {
         name: "El nombre es requerido",
         email: "El correo es requerido",
         emailvalid: "El correo no es válido",
         phone: "El teléfono es requerido",
-        message: "El mensaje es requerido"
+        message: "El mensaje es requerido",
+        recaptcha: "Por favor, verifica que no eres un robot"
       },
       success: "¡Mensaje enviado exitosamente!",
       error: "Ocurrió un error al enviar el mensaje. Intenta nuevamente."
     }
+  },
+  footer: {
+    social: "Sígueme en mis redes sociales",
+    cert: "Certificaciones",
+    copyright: "Todos los derechos reservados"
   }
 };

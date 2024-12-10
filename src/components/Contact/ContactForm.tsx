@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react'
 import emailjs from "@emailjs/browser";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { Box, TextField, Button, Typography } from '@mui/material'
-import { useTranslation } from 'react-i18next';
+import ReCAPTCHA from "react-google-recaptcha"
+import { useTranslation } from 'react-i18next'
 
 interface FormData {
   from_name: string;
@@ -17,12 +18,52 @@ const ContactForm: React.FC = () => {
   const { t } = useTranslation();
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
-  // console.log(`Service: ${import.meta.env.VITE_SERVICE_ID}`, `Template: ${import.meta.env.VITE_TEMPLATE_ID}`, `Public Key: ${import.meta.env.VITE_PUBLIC_KEY}`)
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const environment = import.meta.env.VITE_ENVIRONMENT
+
+  // reCAPTCHA callback
+  const onReCAPTCHAChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
+
+    if (environment === 'development') {
+      console.log('Development environment: skipping reCAPTCHA validation.')
+      handleEmailSubmission(data)
+      return
+    }
+
+    if (!recaptchaToken) {
+      setStatusMessage(t('contact.form.ht.recaptcha'))
+      return
+    }
     
     if (formRef.current) {
-      
+      const formData = new FormData(formRef.current)
+      formData.append('g-recaptcha-response', recaptchaToken)
+
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
+          formData,
+          import.meta.env.VITE_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            reset()
+            setStatusMessage(t('contact.form.success'))
+          },
+          (error) => {
+            setStatusMessage(`${t('contact.form.error')}: ${error.text}`)
+          }
+        )
+    }
+  }
+
+  const handleEmailSubmission = (data: FormData) => {
+    if (formRef.current) {
       emailjs
         .sendForm(
           import.meta.env.VITE_SERVICE_ID,
@@ -36,13 +77,9 @@ const ContactForm: React.FC = () => {
             setStatusMessage(t('contact.form.success'))
           },
           (error) => {
-            setStatusMessage(t('contact.form.error'), error.text)
+            setStatusMessage(`${t('contact.form.error')}: ${error.text}`)
           }
         )
-
-    } else {
-      console.log('Error: Form not found');
-      
     }
   }
 
@@ -102,6 +139,14 @@ const ContactForm: React.FC = () => {
         fullWidth
       />
       {errors.message && <Typography component="span" sx={{color: "red", fontSize: 10}}>{t('contact.form.ht.message')}</Typography>}
+
+      {/* reCAPTCHA */}
+      {environment !== 'development' && (
+        <ReCAPTCHA
+        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+        onChange={onReCAPTCHAChange}
+      ></ReCAPTCHA>
+      )}
       
         {/* Submit button */}
       <Button variant="contained" color="primary" type="submit" sx={{ maxWidth: '150px' }}>

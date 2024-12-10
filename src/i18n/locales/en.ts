@@ -1,3 +1,4 @@
+
 export default {
   navbar: {
     home: "Home",
@@ -8,7 +9,7 @@ export default {
     contact: "Contact"
   },
   hero: {
-    greeting: "Hi, I'm Jon Tmarz",
+    greeting: "Hi, I´m Jon Tmarz",
     title: "Software Engineer and Full Stack Developer",
     description: "with over 6 years of experience. My passion is creating innovative digital solutions that connect with people."
   },
@@ -38,7 +39,7 @@ export default {
       },
       seo: {
         title: "SEO Strategies",
-        description: "Boost your business with search engine optimization strategies. I improve your website's organic positioning to reach more customers and outperform your competition."
+        description: "Boost your business with search engine optimization strategies. I improve your website´s organic positioning to reach more customers and outperform your competition."
       },
       architecture: {
         title: "Software Architecture",
@@ -101,6 +102,10 @@ export default {
         title: "Vinali RCM",
         description: "Development of a website designed for business management services."
       },
+      jontmarz: {
+        title: "Jon Tmarz",
+        description: "Development of a personal website with a blog section."
+      }
     },
     apps: {
       researchpro: {
@@ -111,33 +116,39 @@ export default {
     }
   },
   buttons: {
-    hero: 'Conect with me',
-    about: 'Schedule an Appointment',
-    service: 'Let´s start your project.',
-    portfolio: 'Get in touch me',
+    hero: "Conect with me",
+    about: "Schedule an Appointment",
+    service: "Let´s start your project.",
+    portfolio: "Get in touch me",
     downloadCV: "Download CV",
     sendMessage: "Send Message",
     viewProject: "View Project"
   },
   contact: {
     title: "Contact",
-    text: "Do you have a project in mind? Let's talk about it!",
+    text: "Do you have a project in mind? Let´s talk about it!",
     resume: "Download my CV for more information about my experience and skills.",
     form: {
       name: "Name",
       email: "Email",
       phone: "Phone",
       message: "Message",
-      button: 'Submit',
+      button: "Submit",
       ht: {
         name: "El nombre is required",
         email: "El correo is required",
         emailvalid: "El correo is not valid",
         phone: "El teléfono is required",
-        message: "El mensaje is required"
+        message: "El mensaje is required",
+        recaptcha: "Please confirm that you are not a robot"
       },
       success: "Message sent successfully!",
-      error: 'An error occurred while sending the message. Try again.'
+      error: "An error occurred while sending the message. Try again."
     }
+  },
+  footer: {
+    social: "Follow me on social networks",
+    cert: "Certifications",
+    copyright: "All rights reserved"
   }
 };

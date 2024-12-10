@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonGroup } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const LanguageSwitcher: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation()
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language)
+
+  useEffect(() => {
+    setCurrentLanguage(i18n.language)
+  }, [i18n.language])
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+    i18n.changeLanguage(lng)
+    setCurrentLanguage(lng)
+  };  
 
   return (
     <motion.div
@@ -19,13 +25,13 @@ const LanguageSwitcher: React.FC = () => {
       <ButtonGroup variant="contained" size="small">
         <Button
           onClick={() => changeLanguage('en')}
-          sx={{backgroundColor: i18n.language === 'en' ? '#CCA70A' : '#C0C0C0'}}
+          sx={{backgroundColor: currentLanguage === 'en' || currentLanguage !== 'es-419' ? '#CCA70A' : '#C0C0C0'}}
         >
           EN
         </Button>
         <Button
           onClick={() => changeLanguage('es')}
-          sx={{backgroundColor: i18n.language === 'es' ? '#CCA70A' : '#C0C0C0'}}
+          sx={{backgroundColor: currentLanguage === 'es' || currentLanguage === 'es-419' ? '#CCA70A' : '#C0C0C0'}}
         >
           ES
         </Button>

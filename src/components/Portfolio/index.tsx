@@ -140,6 +140,16 @@ const Portfolio: React.FC = () => {
       image: images['researchpro.webp'],
       url: ''
     },
+    {
+      id: 13,
+      year: 2024,
+      title: t('portfolio.websites.jontmarz.title'),
+      description: t('portfolio.websites.jontmarz.description'),
+      category: ['NodeJS', 'ReactJS'],
+      technologies: ['NodeJS', 'MongoDB', 'React'],
+      image: images['Jon-Tmarz.webp'],
+      url: 'https://jontmarz.netlify.app/'
+    },
   ];
 
   const categories = useMemo(() => {
