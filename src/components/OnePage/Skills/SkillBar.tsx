@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Box, Typography, LinearProgress } from '@mui/material';
-import { Skill } from '../../types';
+import { Skill } from '../../../types';
 
 interface SkillBarProps {
   skill: Skill;

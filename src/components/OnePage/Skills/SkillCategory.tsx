@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Typography } from '@mui/material';
 import SkillBar from './SkillBar';
-import { Skill } from '../../types';
+import { Skill } from '../../../types';
 
 interface SkillCategoryProps {
   title: string;

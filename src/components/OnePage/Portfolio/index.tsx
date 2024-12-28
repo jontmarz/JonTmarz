@@ -6,13 +6,13 @@ import { useTranslation } from 'react-i18next';
 import { Handshake } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import ProjectTabs from './ProjectTabs';
-import { Project } from '../../types';
+import { Project } from '../../../types';
 
 const Portfolio: React.FC = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('VueJS');
 
-  const projectImages = import.meta.glob('../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true });
+  const projectImages = import.meta.glob('../../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true });
   const images: Record<string, string> = {};
   for (const path in projectImages) {
     const fileName = path.split('/').pop(); // Extrae el nombre del archivo

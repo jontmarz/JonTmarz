@@ -1,4 +1,4 @@
-import { button } from "framer-motion/client";
+import { button, title } from "framer-motion/client";
 
 export default {
   navbar: {
@@ -7,7 +7,9 @@ export default {
     services: "Servicios",
     portfolio: "Portafolio",
     skills: "Habilidades",
-    contact: "Contacto"
+    contact: "Contacto",
+    blog: "Blog",
+    login: "Login"
   },
   hero: {
     greeting: "Hola, soy Jon Tmarz",
@@ -150,5 +152,23 @@ export default {
     social: "Sígueme en mis redes sociales",
     cert: "Certificaciones",
     copyright: "Todos los derechos reservados"
+  },
+  forms: {
+    login: {
+      title: "Iniciar Sesión",
+      email: "Correo electrónico",
+      password: "Contraseña",
+      submit: "Iniciar Sesión",
+      signup: "Crear una cuenta",
+      forgot: "Forgot your password?",
+      register: "Create an account",
+      success: "Inicio de Sesión Satisfactorio",
+      errors: {
+        title: "Hubo un error",
+        text: "Por favor revisa los datos y prueba nuevamente.",
+        email: "Email es requerido",
+        password: "Password es requerido"
+      }
+    },
   }
 };

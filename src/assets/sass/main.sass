@@ -5,17 +5,16 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #00000F;
-  --color-secondary: #CCA70A;
-  --color-tertiary: #C0C0C0;
-  --color-accent: #2A002B;
-  --color-highlight: #00AAFF;
+  $color-primary: #00000F;
+  $color-secondary: #CCA70A;
+  $color-tertiary: #C0C0C0;
+  $color-accent: #2A002B;
+  $color-highlight: #00AAFF;
 }
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  background-color: var(--color-primary);
-  color: var(--color-tertiary);
+  @apply bg-[#00000F] text-white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,24 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 .flex-col { flex-direction: column; }
 .smallText { font-size: 0.5rem; }
 
-.menu-desktop {
-  @apply hidden lg:flex;
-  margin-right: 1em;
-  width: 70%;
-  & > a {
-    width: 70px;
-    text-align: center;
-  }
-}
-
-.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1vpabub-MuiButtonBase-root-MuiListItem-root {
-  justify-content: center;
-}
-
-.menu-burger {
-  @apply block md:hidden;
-}
-
 #hero {
   &.bg-hero {
     background-image: url('/src/assets/bg-tool-developer.webp');
@@ -76,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   .bg-card-services {
     background-color: rgb(204, 167, 10, 15%);
     &:hover {
-      background-color: var(--color-accent);
+      background-color: #2A002B;
     }
   }
 

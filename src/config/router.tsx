@@ -1,12 +1,16 @@
 import { RouteObject } from "react-router-dom"
+import { UserContextProvider } from "../context/UserContext"
 import RootLayout from '../layout/RootLayout'
 import PrivateLayout from '../layout/PrivateLayout'
-import Home from '../pages/App'
+import Home from '../pages/Home'
 import Blog from '../pages/Blog'
 import Post from '../pages/Post'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
-import EditBlog from '../pages/EditBlog'
+import Dashboard from '../pages/Dashboard'
+import EditBlog from '../pages/EditPost'
+import EditIdBlog from '../pages/EditIdBlog'
+import ErrorPage from '../pages/ErrorPage'
 
 export const router: RouteObject[] = [
     {
@@ -22,7 +26,7 @@ export const router: RouteObject[] = [
                 element: <Blog />
             },
             {
-                path: "post/:id",
+                path: "post/:idBlog",
                 element: <Post />
             },
             {
@@ -33,20 +37,32 @@ export const router: RouteObject[] = [
                 path: "signup",
                 element: <Signup />
             },
+        ]
+    },
+    {
+        path: "dashboard",
+        element: (
+            <UserContextProvider>
+                <PrivateLayout />
+            </UserContextProvider>
+        ),
+        children: [
             {
-                path: "dashboard",
-                element: <PrivateLayout />,
-                children: [
-                    {
-                        index: true,
-                        element: <EditBlog />
-                    },
-                    {
-                        path: "edit-blog/:id",
-                        element: <EditBlog />
-                    },
-                ]
+                index: true,
+                element: <Dashboard />
+            },
+            {
+                path: "edit",
+                element: <EditBlog />
+            },
+            {
+                path: "edit/:idBlog",
+                element: <EditBlog />
             },
         ]
+    },
+    {
+        path: "*",
+        element: <ErrorPage />
     }
 ]

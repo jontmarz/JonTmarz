@@ -8,13 +8,14 @@ const LanguageSwitcher: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language)
 
   useEffect(() => {
-    setCurrentLanguage(i18n.language)
+    setCurrentLanguage(i18n.language.startsWith('es') ? 'es' : i18n.language)
   }, [i18n.language])
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
     setCurrentLanguage(lng)
-  };  
+  }
+  
 
   return (
     <motion.div
@@ -25,13 +26,13 @@ const LanguageSwitcher: React.FC = () => {
       <ButtonGroup variant="contained" size="small">
         <Button
           onClick={() => changeLanguage('en')}
-          sx={{backgroundColor: currentLanguage === 'en' || currentLanguage !== 'es-419' ? '#CCA70A' : '#C0C0C0'}}
+          sx={{backgroundColor: currentLanguage === 'en' ? '#CCA70A' : '#C0C0C0' }}
         >
           EN
         </Button>
         <Button
           onClick={() => changeLanguage('es')}
-          sx={{backgroundColor: currentLanguage === 'es' || currentLanguage === 'es-419' ? '#CCA70A' : '#C0C0C0'}}
+          sx={{backgroundColor: currentLanguage === 'es' ? '#CCA70A' : '#C0C0C0' }}
         >
           ES
         </Button>

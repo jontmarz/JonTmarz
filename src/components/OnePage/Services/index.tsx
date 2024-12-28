@@ -1,26 +1,14 @@
-import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import React from 'react'
+import { Container, Typography, Button } from '@mui/material'
 import { Link } from "react-scroll"
-import { motion } from 'framer-motion';
-import ServiceCard from './ServiceCard';
-import { useTranslation } from 'react-i18next';
-import { HandHelping } from 'lucide-react';
+import { motion } from 'framer-motion'
+import ServiceCard from './ServiceCard'
+import { useTranslation } from 'react-i18next'
+import { HandHelping } from 'lucide-react'
 
 const Services: React.FC = () => {
   const { t } = useTranslation()
   const services = [
-    {
-      icon: '🌐',
-      title: t('services.items.websites.title'),
-      description: t('services.items.websites.description'),
-      delay: 0.2,
-    },
-    /* {
-      icon: '📈',
-      title: t('services.items.seo.title'),
-      description: t('services.items.seo.description'),
-      delay: 0.4,
-    }, */
     {
       icon: '🏗️',
       title: t('services.items.architecture.title'),
@@ -38,8 +26,20 @@ const Services: React.FC = () => {
       title: t('services.items.consulting.title'),
       description: t('services.items.consulting.description'),
       delay: 1.0,
-    }
-  ];
+    },
+    {
+      icon: '🌐',
+      title: t('services.items.websites.title'),
+      description: t('services.items.websites.description'),
+      delay: 0.2,
+    },
+    /* {
+      icon: '📈',
+      title: t('services.items.seo.title'),
+      description: t('services.items.seo.description'),
+      delay: 0.4,
+    }, */
+  ]
 
   return (
     <section id="services" className="section-padding bg-gradient-to-b from-accent to-primary bg-services">

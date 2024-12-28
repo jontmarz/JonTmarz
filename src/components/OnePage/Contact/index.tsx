@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import { Grid, Container, Button, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { FileDown } from 'lucide-react';
-import jonTmarz from '../../assets/img-jon-tmarz.webp'
+import jonTmarz from '../../../assets/img-jon-tmarz.webp'
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();

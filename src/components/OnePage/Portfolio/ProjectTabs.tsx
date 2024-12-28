@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Tab, Box } from '@mui/material';
-import { Project } from '../../types';
+import { Project } from '../../../types';
 
 interface ProjectTabsProps {
   categories: string[];

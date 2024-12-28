@@ -6,7 +6,9 @@ export default {
     services: "Services",
     portfolio: "Portfolio",
     skills: "Skills",
-    contact: "Contact"
+    contact: "Contact",
+    blog: "Blog",
+    login: "Login"
   },
   hero: {
     greeting: "Hi, I´m Jon Tmarz",
@@ -150,5 +152,23 @@ export default {
     social: "Follow me on social networks",
     cert: "Certifications",
     copyright: "All rights reserved"
+  },
+  forms: {
+    login: {
+      title: "Login",
+      email: "Email",
+      password: "Password",
+      submit: "Login",
+      signup: "SignUp",
+      forgot: "Forgot your password?",
+      register: "Create an account",
+      success: "Login successful",
+      errors: {
+        title: "There was an Error",
+        text: "Please check your data and try again",
+        email: "Email is required",
+        password: "Password is required"
+      }
+    },
   }
 };

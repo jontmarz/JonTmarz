@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
-import { api } from '../../config/axios'
+import { api } from '../../../config/axios'
 import { Box, TextField, Button } from "@mui/material"
 
-const BlogEditor: React.FC = () => {
+const PostEditor: React.FC = () => {
     const [ title, setTitle ] = useState('')
     const [ content, setContent ] = useState('')
     const [ category, setCategory ] = useState('')
@@ -49,4 +49,4 @@ const BlogEditor: React.FC = () => {
     )
 }
 
-export default BlogEditor
+export default PostEditor

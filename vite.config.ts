@@ -7,4 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  resolve: {
+    alias: {
+      '@toolpad/core': '/node_modules/@toolpad/core/index.js',
+    },
+  },
 });

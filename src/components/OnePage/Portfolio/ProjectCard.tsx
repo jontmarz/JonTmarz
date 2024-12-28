@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import { ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Project } from '../../types';
+import { Project } from '../../../types';
 
 interface ProjectCardProps {
   project: Project;

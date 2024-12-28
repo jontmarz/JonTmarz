@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import SkillCategory from './SkillCategory';
-import { Skill } from '../../types';
+import { Skill } from '../../../types';
 
 const Skills: React.FC = () => {
   const skills: Record<string, Skill[]> = {
