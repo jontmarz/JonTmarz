@@ -38,13 +38,13 @@ export const UserContextProvider: React.FC<UserProviderProps> = ({ children }) =
             
         try {
             const res = await api.get("/auth/user")
-            // console.log("User Response:", res.data)
-            setUser(res.data.user)     
+            setUser(res.data.user)
+            // setUser('Jon Tmarz')
 
-        } catch (er) {
+        } catch (er: any) {
             console.log('Error fetching user', er,)
             if (er.response.status >= 500 || er.response.status >= 400) {
-                logOut()
+                // logOut()
             }
         }
     }
