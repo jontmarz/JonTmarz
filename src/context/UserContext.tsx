@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, createContext } from 'react'
-import { api, getToken, deleteToken } from '../config/axios'
+import { api, deleteToken, getValidToken } from '../config/axios'
 import { useNavigate } from 'react-router-dom'
 
 const UserContext = createContext<any>(null)
@@ -11,7 +11,7 @@ interface UserProviderProps {
 export const UserContextProvider: React.FC<UserProviderProps> = ({ children }) => {
     const [ user, setUser ] = useState<any>(null)
     const [ isLoggedIn, setIsLoggedIn ] = useState(false)
-    const token = getToken()
+    const token = getValidToken()
     const navigate = useNavigate()
 
     const checkSession = () => {
@@ -35,22 +35,30 @@ export const UserContextProvider: React.FC<UserProviderProps> = ({ children }) =
 
     const getUser = async () => {
         if(!isLoggedIn) navigate('/login')
-            
+
+        if (!token) {
+            console.log("Token expired or not valid")
+            window.location.href = '/login'
+            return
+        }
+        
         try {
             const res = await api.get("/auth/user")
             setUser(res.data.user)
-            // setUser('Jon Tmarz')
 
         } catch (er: any) {
             console.log('Error fetching user', er,)
             if (er.response.status >= 500 || er.response.status >= 400) {
-                // logOut()
+                logOut()
             }
         }
     }
 
     useEffect(() => {
         checkSession()
+    }, [token])
+    
+    useEffect(() => {
         if (isLoggedIn) {
             getUser()
         } else {

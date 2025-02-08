@@ -1,22 +1,22 @@
-import React, { useState, useMemo } from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import React, { useState, useMemo } from 'react'
+import { Container, Typography, Button } from '@mui/material'
 import { Link } from "react-scroll"
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { Handshake } from 'lucide-react';
-import ProjectCard from './ProjectCard';
-import ProjectTabs from './ProjectTabs';
-import { Project } from '../../../types';
+import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { Handshake, CalendarSearch } from 'lucide-react'
+import ProjectCard from './ProjectCard'
+import ProjectTabs from './ProjectTabs'
+import { Project } from '../../../types'
 
 const Portfolio: React.FC = () => {
-  const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState('VueJS');
+  const { t } = useTranslation()
+  const [activeCategory, setActiveCategory] = useState('VueJS')
 
-  const projectImages = import.meta.glob('../../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true });
-  const images: Record<string, string> = {};
+  const projectImages = import.meta.glob('../../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true })
+  const images: Record<string, string> = {}
   for (const path in projectImages) {
     const fileName = path.split('/').pop(); // Extrae el nombre del archivo
-    if (fileName) images[fileName] = (projectImages[path] as any).default || projectImages[path];
+    if (fileName) images[fileName] = (projectImages[path] as any).default || projectImages[path]
   }
 
   const projects: Project[] = [
@@ -201,7 +201,7 @@ const Portfolio: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-around mt-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -216,6 +216,24 @@ const Portfolio: React.FC = () => {
               sx={{ mt: '2em' }}
               >
               <Link to="contact" smooth={true} duration={500}>{t('buttons.hero')}</Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              startIcon={<CalendarSearch className="w-5 h-5" />}
+              className="btn-primary"
+              sx={{ mt: '2em' }}
+              href="https://calendly.com/jontmarz/30min?back=1"
+              target="_blank"
+              >
+              {t('buttons.bookCall')}
               </Button>
             </motion.div>
           </div>

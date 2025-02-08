@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+.css-1v887fi-MuiButtonGroup-root .MuiButtonGroup-grouped { min-width: 30px !important; }
+.tiptap {
+    ul, ol {
+        padding: 0 1rem;
+        margin: 1.25rem 1rem 1.25rem 0.4rem;
+        li p {
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
+        
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
+        margin-top: 1.5rem;
+        text-wrap: pretty;
+    }
+    h1, h2 {
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+    }
+    h1 { font-size: 1.4rem;}
+    h2 { font-size: 1.2rem;}
+    h3 { font-size: 1.1rem;}
+    h4, h5, h6 { font-size: 1rem;}
+    code {
+        font-size: 0.9rem;
+        padding: 0.2em 0.4em;
+        background-color: #48424f;
+        border-radius: 0.4em;
+        font-family: "Source Code Pro", serif;
+    }
+    pre {
+        padding: 0.5rem;
+        background-color: #48424f;
+        border-radius: 0.4em;
+        font-family: "Source Code Pro", serif;
+        code {
+            font-size: 0.9rem;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+        }
+    }
+    blackquote {
+        padding: 0.5rem;
+        background-color: #48424f;
+        border-left: 0.25rem solid #f0f0f0;
+        margin: 0;
+        font-style: italic;
+    }
+    hr {
+        border: 0;
+        border-top: 1px solid #f0f0f0;
+        margin: 1.5rem 0;
+    }
+    
+}
+
+#tiptap-editor {
+    .tiptap {
+        &.ProseMirror {
+            padding: 0.5em;
+            border: 1px solid rgba(255, 255, 255, 0.23);
+            &:hover {
+                border-color: #fff;
+            }
+            &:active {
+                border-color: #CCA70A;
+            }
+            p.is-empty.empty-editor::before {
+                content: 'Start typing here...';
+                color: rgba(255, 255, 255, 0.5);
+                float: left;
+                pointer-events: none;
+                height: 0;
+            }
+            p, h4, h5, h6 { margin-bottom: 0.5em; }
+            h1, h2, h3, h4 { margin: 1em 0; }
+        }
+    }
+}

@@ -117,6 +117,14 @@ export default {
       description: "Desarrollo de sitio web personal Actualizado con sección de blog."
     }
   },
+  skills:{
+    title: 'Habilidades',
+    subtitle: 'Habilidades Blandas',
+    mainSkill: 'Liderazgo',
+    secondSkill: 'Trabajo en Equipo',
+    thirdSkill: 'Pensamiento Estratégico',
+    fourthSkill: 'Gestión del Cambio y Adaptación',
+  },
   buttons: {
     hero: "Conecta conmigo",
     about: "Agenda una consulta",
@@ -124,12 +132,14 @@ export default {
     portfolio: "Contáctame",
     downloadCV: "Descargar CV",
     sendMessage: "Enviar Mensaje",
-    viewProject: "Ver Proyecto"
+    viewProject: "Ver Proyecto",
+    bookCall: "Agendar Llamada"
   },
   contact: {
     title: "Contacto",
     text: "¿Listo para comenzar tu próximo proyecto? ¡Contáctame!",
     resume: "Descarga mi CV para obtener más información sobre mi experiencia y habilidades.",
+    book: "Agenda una llamada hoy y descubre cómo nuestras soluciones tecnológicas o de liderazgo pueden transformar tu negocio.",
     form: {
       name: "Nombre",
       email: "Correo",

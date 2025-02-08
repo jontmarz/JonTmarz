@@ -117,6 +117,14 @@ export default {
       }
     }
   },
+  skills: {
+    title: 'Skills',
+    subtitle: 'Soft Skills',
+    mainSkill: 'Leadership',
+    secondSkill: 'Teamwork',
+    thirdSkill: 'Strategic Thinking',
+    fourthSkill: 'Change Management and Adaptability',
+  },
   buttons: {
     hero: "Conect with me",
     about: "Schedule an Appointment",
@@ -124,12 +132,14 @@ export default {
     portfolio: "Get in touch me",
     downloadCV: "Download CV",
     sendMessage: "Send Message",
-    viewProject: "View Project"
+    viewProject: "View Project",
+    bookCall: "Book a Call"
   },
   contact: {
     title: "Contact",
     text: "Do you have a project in mind? Let´s talk about it!",
     resume: "Download my CV for more information about my experience and skills.",
+    book: 'Schedule a call today and discover how our technology or leadership solutions can transform your business.',
     form: {
       name: "Name",
       email: "Email",

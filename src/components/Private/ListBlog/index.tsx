@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { api } from '../../../config/axios'
-import { Box, Typography, Paper } from "@mui/material"
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { Link } from "react-router-dom"
+import { Box, Typography, Paper, Button } from "@mui/material"
+import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import PostImg from '../../../assets/post_img.webp'
 
-const ListBlog: React.FC = () => {
+const ListBlog: React.FC<{ handleNavigation: (key: string, id?: string) => void }> = ({ handleNavigation }) => {
     const [ blogs, setBlogs ] = useState([])
     const columns: GridColDef[] = [
         { field: 'id', headerName: 'ID', width: 90 },
@@ -20,17 +19,20 @@ const ListBlog: React.FC = () => {
         { field: 'content', headerName: 'Excerpt', width: 250 },
         { field: 'category', headerName: 'Category', width: 150 },
         { field: 'actions', headerName: 'Actions', width: 100, renderCell: (params) => (
-            <Link to={`/edit/${params.row._id}`}>Edit</Link>
+            <Button onClick={() => handleNavigation('edit', params.row._id)}>Edit</Button>
         ), }
     ]
     const paginationModel = { page: 0, pageSize: 50 }
+    const omitTags = (str: string) => str.replace(/<[^>]*>/g, '')
     
     const rows = blogs.map((blog: any, index) => {
+        const featuredImage = blog.featuredImage ? `${import.meta.env.VITE_URL_SERVER}${blog.featuredImage}` : PostImg
+        
         return {
             id: index + 1,
-            image: blog.image ? blog.image : PostImg,
+            image: featuredImage,
             title: blog.title,
-            content: blog.content,
+            content: omitTags(blog.content),
             category: blog.category,
             _id: blog._id
         }

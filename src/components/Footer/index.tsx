@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Container, Typography, IconButton, Grid, Stack } from '@mui/material'
-import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp } from '@mui/icons-material'
+import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp, EditCalendar } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 import scrumBadge from '../../assets/scrum-foundation-certification-candidate.webp'
 
@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
     { name: 'Instagram', icon: Instagram, link: 'https://www.instagram.com/jon_tmarz/' },
     { name: 'YouTube', icon: YouTube, link: 'https://www.youtube.com/user/hardjonedi' },
     { name: 'X', icon: X, link: 'https://twitter.com/JonTMarz' },
+    { name: 'Calendly', icon: EditCalendar, link: 'https://calendly.com/jontmarz/30min?back=1' },
   ]
 
   const certifications = [
@@ -27,7 +28,8 @@ const Footer: React.FC = () => {
         bgcolor: 'primary.main',
         color: '#00000F',
         py: 3,
-        mt: 'auto',
+        flexShrink: 0,
+        position: 'relative',
       }}
     >
       <Container maxWidth="lg">

@@ -1,10 +1,12 @@
-import React from 'react';
-import { Container, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import SkillCategory from './SkillCategory';
-import { Skill } from '../../../types';
+import React from 'react'
+import { Container, Typography } from '@mui/material'
+import { motion } from 'framer-motion'
+import SkillCategory from './SkillCategory'
+import { useTranslation } from 'react-i18next';
+import { Skill } from '../../../types'
 
 const Skills: React.FC = () => {
+  const { t } = useTranslation()
   const skills: Record<string, Skill[]> = {
     'Languages & Frameworks': [
       { name: 'JavaScript', progress: 90, category: 'language' },
@@ -14,10 +16,7 @@ const Skills: React.FC = () => {
       { name: 'VueJS', progress: 80, category: 'framework' },
       { name: 'ReactJS', progress: 70, category: 'framework' },
     ],
-    'Databases': [
-      { name: 'MySQL', progress: 80, category: 'database' },
-      { name: 'MongoDB', progress: 90, category: 'database' },
-    ],
+    
     'CMS & Development Tools': [
       { name: 'WordPress', progress: 98, category: 'cms' },
       { name: 'Web Services', progress: 98, category: 'tools' },
@@ -27,6 +26,16 @@ const Skills: React.FC = () => {
       { name: 'AWS', progress: 40, category: 'cloud' },
       { name: 'Azure', progress: 40, category: 'cloud' },
       { name: 'CPanel', progress: 95, category: 'cloud' },
+    ],
+    'Databases': [
+      { name: 'MySQL', progress: 80, category: 'database' },
+      { name: 'MongoDB', progress: 90, category: 'database' },
+    ],
+    'Soft Skills': [
+      { name: t('skills.mainSkill'), progress: 80, category: 'Soft Skills' },
+      { name: t('skills.secondSkill'), progress: 80, category: 'Soft Skills' },
+      { name: t('skills.thirdSkill'), progress: 95, category: 'Soft Skills' },
+      { name: t('skills.fourthSkill'), progress: 95, category: 'Soft Skills' },
     ],
   };
 
@@ -44,7 +53,7 @@ const Skills: React.FC = () => {
             component="h2"
             className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text"
           >
-            Skills
+            {t('skills.title')}
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

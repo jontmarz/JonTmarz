@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { api, setToken } from '../../config/axios'
 import LoginForm from './LoginForm'
-import { Typography, Grid, TextField, Box, Button } from '@mui/material'
+import { Typography, Grid, Box } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Swal from 'sweetalert2'
@@ -35,23 +35,21 @@ const Login: React.FC = () =>  {
           showConfirmButton: false,
           timer: 1500,
         })
-
-        console.log('token', res.data.token.tokenid);
         
       }
       navigate('/dashboard')
       
 
-    } catch (e) {
+    } catch (e: any) {
       console.error('Error logging in', e)
         
-        Swal.fire({
-            title: t('forms.login.errors.title'),
-            text: e.response?.data?.message || t('forms.login.errors.text'),
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 2000,
-        })
+      Swal.fire({
+        title: t('forms.login.errors.title'),
+        text: e.response?.data?.message || t('forms.login.errors.text'),
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      })
     } finally {
       setLoading(false)
     }    

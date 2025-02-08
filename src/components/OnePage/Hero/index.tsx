@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { Link } from 'react-scroll'
 import { Handshake } from 'lucide-react';
 
@@ -46,22 +46,44 @@ const Hero: React.FC = () => {
         >
           {t('hero.description')}
         </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            startIcon={<Handshake className="w-5 h-5" />}
-            className="btn-primary"
-          >
-            <Link to="contact" smooth={true} duration={500}>{t('buttons.hero')}</Link>
-          </Button>
-        </motion.div>
+        <Grid container spacing={3} alignItems="center" justifyContent="space-around">
+          <Grid item xs={12} sm={6}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="text-center"
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className="btn-primary"
+              >
+                <Link to="contact" smooth={true} duration={500}>{t('buttons.hero')}</Link>
+              </Button>
+            </motion.div>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="text-center"
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className="btn-primary"
+                href="https://calendly.com/jontmarz/30min?back=1"
+                target='_blank'
+              >
+                {t('buttons.bookCall')}
+              </Button>
+            </motion.div>
+          </Grid>
+        </Grid>
       </motion.div>
       
       {/* Decorative elements */}

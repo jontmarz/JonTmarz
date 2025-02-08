@@ -4,12 +4,12 @@ import RootLayout from '../layout/RootLayout'
 import PrivateLayout from '../layout/PrivateLayout'
 import Home from '../pages/Home'
 import Blog from '../pages/Blog'
-import Post from '../pages/Post'
+import SinglePost from '../pages/SinglePost'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import Dashboard from '../pages/Dashboard'
-import EditBlog from '../pages/EditPost'
-import EditIdBlog from '../pages/EditIdBlog'
+import EditPost from '../pages/EditPost'
+import NewPost from '../pages/NewPost'
 import ErrorPage from '../pages/ErrorPage'
 
 export const router: RouteObject[] = [
@@ -27,7 +27,7 @@ export const router: RouteObject[] = [
             },
             {
                 path: "post/:idBlog",
-                element: <Post />
+                element: <SinglePost />
             },
             {
                 path: "login",
@@ -52,12 +52,12 @@ export const router: RouteObject[] = [
                 element: <Dashboard />
             },
             {
-                path: "edit",
-                element: <EditBlog />
+                path: "new",
+                element: <NewPost />
             },
             {
-                path: "edit/:idBlog",
-                element: <EditBlog />
+                path: "edit/:id",
+                element: <EditPost />
             },
         ]
     },
