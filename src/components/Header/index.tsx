@@ -30,9 +30,9 @@ const Header: React.FC = () => {
         { id: "Services", to:'services', label: t("navbar.services"), external: false },
         { id: "Portfolio", to:'portfolio', label: t("navbar.portfolio"), external: false },
         { id: "Skills", to:'skills', label: t("navbar.skills"), external: false },
-        { id: "Blog", to:'/blog', label: t("navbar.blog"), external: true },
+        // { id: "Blog", to:'/blog', label: t("navbar.blog"), external: true },
         { id: "Contact", to:'contact', label: t("navbar.contact"), external: false },
-        { id: "Login", to:'/login', label: t("navbar.login"), external: true },
+        // { id: "Login", to:'/login', label: t("navbar.login"), external: true },
     ]
 
     useEffect(() => {

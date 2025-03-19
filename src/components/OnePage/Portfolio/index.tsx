@@ -74,7 +74,7 @@ const Portfolio: React.FC = () => {
       id: 6,
       year: 2023,
       title: t('portfolio.websites.vinali.title'),
-      category: ['WordPress', 'VueJS'],
+      category: ['WordPress'],
       description: t('portfolio.websites.vinali.description'),
       technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
       image: images['Vinali-Group.webp'],
@@ -85,13 +85,33 @@ const Portfolio: React.FC = () => {
       year: 2023,
       title: t('portfolio.websites.tco.title'),
       description: t('portfolio.websites.tco.description'),
-      category: ['WordPress', 'VueJS'],
+      category: ['WordPress'],
       technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
       image: images['Tree-Care-Office.webp'],
       url: 'https://treecareoffice.com/'
     },
     {
       id: 8,
+      year: 2023,
+      title: t('portfolio.websites.vinaliCalc.title'),
+      category: ['VueJS'],
+      description: t('portfolio.websites.vinaliCalc.description'),
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
+      image: images['Savings-Calculator-Vinali-Group.webp'],
+      url: 'https://vinaligroup.com/'
+    },
+    {
+      id: 9,
+      year: 2023,
+      title: t('portfolio.websites.tcoCalc.title'),
+      description: t('portfolio.websites.tcoCalc.description'),
+      category: ['VueJS'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
+      image: images['Savings-Calculator-Tree-Care.webp'],
+      url: 'https://treecareoffice.com/'
+    },
+    {
+      id: 10,
       year: 2023,
       title: t('portfolio.websites.holbie.title'),
       description: t('portfolio.websites.holbie.description'),
@@ -101,17 +121,37 @@ const Portfolio: React.FC = () => {
       url: 'https://holisticbillingservices.com/'
     },
     {
-      id: 9,
+      id: 11,
+      year: 2023,
+      title: t('portfolio.websites.ncg.title'),
+      description: t('portfolio.websites.ncg.description'),
+      category: ['WordPress'],
+      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      image: images['NCG-Medical.webp'],
+      url: 'https://www.ncgmedical.com/'
+    },
+    {
+      id: 12,
       year: 2024,
       title: t('portfolio.websites.taxpert.title'),
       description: t('portfolio.websites.taxpert.description'),
       category: ['WordPress'],
       technologies: ['WordPress', 'PHP', 'JavaScript'],
       image: images['Taxpert-Strategies.webp'],
+      url: 'https://samuraiseb.org/'
+    },
+    {
+      id: 13,
+      year: 2024,
+      title: t('portfolio.websites.acroskating.title'),
+      description: t('portfolio.websites.taxpert.description'),
+      category: ['WordPress'],
+      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      image: images['Samurai-Seb.webp'],
       url: 'https://taxpertnow.com/'
     },
     {
-      id: 10,
+      id: 14,
       year: 2024,
       title: t('portfolio.websites.netvin.title'),
       description: t('portfolio.websites.netvin.description'),
@@ -121,7 +161,7 @@ const Portfolio: React.FC = () => {
       url: 'https://netvin.co/'
     },
     {
-      id: 11,
+      id: 15,
       year: 2024,
       title: t('portfolio.websites.rcm.title'),
       description: t('portfolio.websites.rcm.description'),
@@ -131,7 +171,7 @@ const Portfolio: React.FC = () => {
       url: 'https://vinalircm.com/'
     },
     {
-      id: 12,
+      id: 16,
       year: 2024,
       title: t('portfolio.apps.researchpro.title'),
       description: t('portfolio.apps.researchpro.description'),
@@ -141,7 +181,7 @@ const Portfolio: React.FC = () => {
       url: ''
     },
     {
-      id: 13,
+      id: 17,
       year: 2024,
       title: t('portfolio.websites.jontmarz.title'),
       description: t('portfolio.websites.jontmarz.description'),
