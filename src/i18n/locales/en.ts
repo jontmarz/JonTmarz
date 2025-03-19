@@ -35,9 +35,9 @@ export default {
   services: {
     title: "Services",
     items: {
-      websites: {
-        title: "Website Development",
-        description: "I transform ideas into modern, functional, and optimized websites. From landing pages to complete platforms, I ensure your online presence is unique, attractive, and efficient."
+      automation: {
+        title: "Process Automation",
+        description: "I automate manual and repetitive tasks, optimizing the efficiency and productivity of your business. From data collection to report generation, I help you simplify processes and reduce costs with the support of Artificial Intelligence."
       },
       seo: {
         title: "SEO Strategies",
@@ -49,11 +49,11 @@ export default {
       },
       webapps: {
         title: "Web Application Development",
-        description: "I build interactive and high-performance web applications, tailored to your needs and ready to boost productivity and user experience."
+        description: "I build high-performance web applications and interactive websites, tailored to your needs and ready to boost productivity and user experience."
       },
       consulting: {
-        title: "Application Development Consulting",
-        description: "I help you plan, design, and implement effective technological solutions. From conceptualization to execution, I optimize your resources and ensure project success."
+        title: "Specialized Consultancies",
+        description: "I help you plan, design, and implement effective technological solutions using Artificial Intelligence. From conceptualization to execution, optimizing your resources and ensuring the success of the project."
       }
     }
   },
@@ -90,11 +90,19 @@ export default {
       },
       holbie: {
         title: "Holbie",
-        description: "Development of a functional website for health and consulting services."
+        description: "Development of a functional website for health and consulting services. Custom plugin to Billing Codes identifications."
+      },
+      ncg: {
+        title: "NCG Medical",
+        description: "Development of a functional website for health and consulting services. Development of a plugin for migrating a blog from HubSpot to WordPress."
+      },
+      acroskating: {
+        title: "Acroskating",
+        description: "Development of an interactive website for Samurai Seb, acroskating influencer, with a specialized online store for exclusive sports gear."
       },
       taxpert: {
         title: "Taxpert Strategies",
-        description: "Development of a website with document management software."
+        description: "Development of a website with document management software developed in a custom plugin."
       },
       netvin: {
         title: "Netvin",
@@ -103,6 +111,14 @@ export default {
       rcm: {
         title: "Vinali RCM",
         description: "Development of a website designed for business management services."
+      },
+      tcoCalc: {
+        title: "treecare Office Calculator",
+        description: "Development of a payroll calculator web app to calculate personnel expense savings"
+      },
+      vinaliCalc: {
+        title: "Vinali Calculator",
+        description: "Development of a payroll calculator web app to calculate personnel expense savings"
       },
       jontmarz: {
         title: "Jon Tmarz",
@@ -139,7 +155,7 @@ export default {
     title: "Contact",
     text: "Do you have a project in mind? Let´s talk about it!",
     resume: "Download my CV for more information about my experience and skills.",
-    book: 'Schedule a call today and discover how our technology or leadership solutions can transform your business.',
+    book: 'Schedule a call today and discover how my technology or leadership solutions can transform your business.',
     form: {
       name: "Name",
       email: "Email",
@@ -156,7 +172,14 @@ export default {
       },
       success: "Message sent successfully!",
       error: "An error occurred while sending the message. Try again."
-    }
+      /* name: "Name",
+      email: "Email",
+      PhoneNumber: "Phone Number",
+      message: "Message",
+      submit: "Send",
+      alternativeContact: "You can also contact us directly at:",
+      successMessage: "Thank you for your message. We will get in touch soon." */
+    },
   },
   footer: {
     social: "Follow me on social networks",

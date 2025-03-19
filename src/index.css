@@ -41,6 +41,14 @@ h1, h2, h3, h4, h5, h6 {
 .flex-col { flex-direction: column; }
 .smallText { font-size: 0.5rem; }
 
+/* header */
+header.MuiPaper-root {
+  color: #fff;
+  li.MuiListItem-root {
+    a { cursor: pointer; }
+  }
+}
+
 .menu-desktop {
   @apply hidden lg:flex;
   margin-right: 1em;

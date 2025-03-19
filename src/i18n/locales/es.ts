@@ -36,9 +36,9 @@ export default {
   services: {
     title: "Servicios",
     items: {
-      websites: {
-        title: "Desarrollo de Websites",
-        description: "Transformo ideas en sitios web modernos, funcionales y optimizados. Desde landing pages hasta plataformas completas, garantizo que tu presencia en línea sea única, atractiva y eficiente."
+      automation: {
+        title: "Automatización de Procesos",
+        description: "Automatizo tareas manuales y repetitivas, optimizando la eficiencia y la productividad de tu negocio. Desde la recolección de datos hasta la generación de informes, te ayudo a simplificar procesos y a reducir costos apoyandos con Inteligencia Artificial."
       },
       seo: {
         title: "Estrategias SEO",
@@ -50,11 +50,11 @@ export default {
       },
       webapps: {
         title: "Desarrollo de Aplicaciones Web",
-        description: "Construyo aplicaciones web interactivas y de alto rendimiento, adaptadas a tus necesidades y listas para impulsar la productividad y la experiencia del usuario."
+        description: "Construyo aplicaciones web y sitios web interactivas de alto rendimiento, adaptadas a tus necesidades y listas para impulsar la productividad y la experiencia del usuario."
       },
       consulting: {
-        title: "Consultoría en Desarrollo de Aplicaciones",
-        description: "Te ayudo a planificar, diseñar e implementar soluciones tecnológicas efectivas. Desde la conceptualización hasta la ejecución, optimizo tus recursos y garantizo el éxito del proyecto."
+        title: "Consultorías especializadas",
+        description: "Te ayudo a planificar, diseñar e implementar soluciones tecnológicas efectivas utilizando Inteligencia Artificial. Desde la conceptualización hasta la ejecución, optimizando tus recursos y garantizando el éxito del proyecto."
       }
     }
   },
@@ -91,11 +91,19 @@ export default {
       },
       holbie: {
         title: "Holbie",
-        description: "Desarrolo de sitio web funcional para servicios de salud y consultoría."
+        description: "Desarrolo de sitio web funcional para servicios de salud y consultoría. Plugin personalizado para la identificación de Billing Codes "
+      },
+      ncg: {
+        title: "NCG Medical",
+        description: "Desarrolo de sitio web funcional para servicios de salud y consultoría. Desarrollo de plugin para la migración de Blog desde HubSPot a WordPress"
+      },
+      acroskating:{
+        title: "Acroskating",
+        description: "Desarrollo de sitio web interactivo para Samurai Seb, influencer de acroskating, con tienda virtual especializada en artículos deportivos exclusivos."
       },
       taxpert: {
         title: "Taxpert Strategies",
-        description: "Desarrollo de sitio web con software de gestión documental."
+        description: "Desarrollo de sitio web con software de gestión documental desarrollado en un plugin personalizado."
       },
       netvin: {
         title: "Netvin",
@@ -104,6 +112,14 @@ export default {
       rcm: {
         title: "Vinali RCM",
         description: "Desarrollo de un sitio web diseñado para servicios de gestión empresarial."
+      },
+      tcoCalc: {
+        title: "treecare Office Calculator",
+        description: "Desarrollo de una aplicación web para calcular los ahorros de gastos de personal."
+      },
+      vinaliCalc: {
+        title: "Vinali Calculator",
+        description: "Desarrollo de una aplicación web para calcular los ahorros de gastos de personal."
       },
     },
     apps: {
@@ -139,7 +155,7 @@ export default {
     title: "Contacto",
     text: "¿Listo para comenzar tu próximo proyecto? ¡Contáctame!",
     resume: "Descarga mi CV para obtener más información sobre mi experiencia y habilidades.",
-    book: "Agenda una llamada hoy y descubre cómo nuestras soluciones tecnológicas o de liderazgo pueden transformar tu negocio.",
+    book: "Agenda una llamada hoy y descubre cómo mis soluciones tecnológicas o de liderazgo pueden transformar tu negocio.",
     form: {
       name: "Nombre",
       email: "Correo",
@@ -156,7 +172,13 @@ export default {
       },
       success: "¡Mensaje enviado exitosamente!",
       error: "Ocurrió un error al enviar el mensaje. Intenta nuevamente."
-    }
+      /* name: "Nombre",
+      email: "Correo electrónico",
+      message: "Mensaje",
+      submit: "Enviar",
+      alternativeContact: "También puede contactarnos directamente en:",
+      successMessage: "Gracias por su mensaje. Nos pondremos en contacto pronto." */
+    },
   },
   footer: {
     social: "Sígueme en mis redes sociales",

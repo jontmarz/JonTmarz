@@ -13,31 +13,31 @@ const Services: React.FC = () => {
       icon: '🏗️',
       title: t('services.items.architecture.title'),
       description: t('services.items.architecture.description'),
-      delay: 0.6,
+      delay: 0.2,
     },
     {
       icon: '💻',
       title: t('services.items.webapps.title'),
       description: t('services.items.webapps.description'),
-      delay: 0.8,
+      delay: 0.4,
     },
     {
       icon: '🧠',
       title: t('services.items.consulting.title'),
       description: t('services.items.consulting.description'),
-      delay: 1.0,
+      delay: 0.6,
     },
     {
-      icon: '🌐',
-      title: t('services.items.websites.title'),
-      description: t('services.items.websites.description'),
-      delay: 0.2,
+      icon: '🤖',
+      title: t('services.items.automation.title'),
+      description: t('services.items.automation.description'),
+      delay: 0.8,
     },
     /* {
       icon: '📈',
       title: t('services.items.seo.title'),
       description: t('services.items.seo.description'),
-      delay: 0.4,
+      delay: 1.0,
     }, */
   ]
 
