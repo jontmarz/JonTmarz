@@ -10,6 +10,7 @@ import Signup from '../pages/Signup'
 import Dashboard from '../pages/Dashboard'
 import EditPost from '../pages/EditPost'
 import NewPost from '../pages/NewPost'
+import MasterclassWeb from '../components/LandingPages/MasterClass_Web'
 import ErrorPage from '../pages/ErrorPage'
 
 export const router: RouteObject[] = [
@@ -60,6 +61,10 @@ export const router: RouteObject[] = [
                 element: <EditPost />
             },
         ]
+    },
+    {
+        path: "masterclass-marketing-ia",
+        element: <MasterclassWeb />
     },
     {
         path: "*",

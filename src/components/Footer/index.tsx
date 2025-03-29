@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Container, Typography, IconButton, Grid, Stack } from '@mui/material'
-import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp, EditCalendar } from '@mui/icons-material'
+import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp, EditCalendar, Facebook, TikTok } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 import scrumBadge from '../../assets/scrum-foundation-certification-candidate.webp'
 
@@ -12,9 +12,10 @@ const Footer: React.FC = () => {
     { name: 'Whatsapp', icon: WhatsApp, link: 'https://api.whatsapp.com/send?phone=573194356458&text=Hola%20%F0%9F%91%8B.%20Quiero%20iniciar%20un%20nuevo%20proyecto%20de%20desarrollo.%20' },
     { name: 'GitHub', icon: GitHub, link: 'https://github.com/jontmarz' },
     { name: 'Instagram', icon: Instagram, link: 'https://www.instagram.com/jon_tmarz/' },
-    { name: 'YouTube', icon: YouTube, link: 'https://www.youtube.com/user/hardjonedi' },
+    { name: 'Facebook', icon: Facebook, link: 'https://www.facebook.com/jon.martz.co/' },
+    // { name: 'YouTube', icon: YouTube, link: 'https://www.youtube.com/user/hardjonedi' },
     { name: 'X', icon: X, link: 'https://twitter.com/JonTMarz' },
-    { name: 'Calendly', icon: EditCalendar, link: 'https://calendly.com/jontmarz/30min?back=1' },
+    { name: 'Calendly', icon: EditCalendar, link: 'https://calendly.com/jontmarz' },
   ]
 
   const certifications = [
