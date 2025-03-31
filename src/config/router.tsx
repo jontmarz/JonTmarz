@@ -10,7 +10,7 @@ import Signup from '../pages/Signup'
 import Dashboard from '../pages/Dashboard'
 import EditPost from '../pages/EditPost'
 import NewPost from '../pages/NewPost'
-import MasterclassWeb from '../components/LandingPages/MasterClass_Web'
+import MasterclassWeb from '../pages/landings/WebinarWeb'
 import ErrorPage from '../pages/ErrorPage'
 
 export const router: RouteObject[] = [
@@ -63,7 +63,7 @@ export const router: RouteObject[] = [
         ]
     },
     {
-        path: "masterclass-marketing-ia",
+        path: "webinar-marketing-ia",
         element: <MasterclassWeb />
     },
     {

@@ -1,16 +1,15 @@
 import React, { useRef, useState } from 'react'
-import emailjs from "@emailjs/browser";
-import MailerLite from "@mailerlite/mailerlite-nodejs"
+import emailjs from "@emailjs/browser"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { Box, TextField, Button, Typography } from '@mui/material'
 import ReCAPTCHA from "react-google-recaptcha"
 import { useTranslation } from 'react-i18next'
 
 interface FormData {
-  from_name: string;
-  email_address: string;
-  phone_number: string;
-  message: string;
+  from_name: string
+  email_address: string
+  phone_number: string
+  message: string
 }
 
 const ContactForm: React.FC = () => {
@@ -29,62 +28,19 @@ const ContactForm: React.FC = () => {
   };
 
   const addMailerLite = async (data: FormData): Promise<void> => {
-    const apiKey = import.meta.env.VITE_MAILERLITE_API_KEY;
-  
-    // Inicializar MailerLite
-    const mailerLite = new MailerLite({ api_key: apiKey });
-  
-    // Dividir el nombre completo en palabras
-    const nameParts = data.from_name.trim().split(/\s+/);
-    let firstName = '';
-    let lastName = '';
-  
-    switch (nameParts.length) {
-      case 1:
-        firstName = nameParts[0];
-        lastName = '';
-        break;
-      case 2:
-        firstName = nameParts[0];
-        lastName = nameParts[1];
-        break;
-      case 3:
-        firstName = `${nameParts[0]} ${nameParts[1]}`;
-        lastName = nameParts[2];
-        break;
-      default:
-        firstName = `${nameParts[0]} ${nameParts[1]}`;
-        lastName = nameParts.slice(2).join(' ');
-        break;
-    }
-  
-    const subscriberData = {
-      email: data.email_address,
-      fields: {
-        name: firstName,
-        last_name: lastName,
-        phone: data.phone_number,
-      },
-      groups: [] as string[],
-    }
 
-    // Agregar el grupo de suscriptores al que se quiere unir el suscriptor
-    const groupIds = import.meta.env.VITE_MAILERLITE_GROUPS.split(',')
-    for (const groupId of groupIds) {
-      if (groupId.trim() !== '') {
-        subscriberData.groups.push(groupId.trim())
-      }
-    }
-  
     try {
-      // Agregar el suscriptor a cada grupo
-        await mailerLite.subscribers.createOrUpdate(subscriberData)
-        // console.log(`Subscriber added to groups: ${subscriberData.groups.join(', ')}`);
-      
+      const res = await fetch('/.netlify/functions/mailerlite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json()
+      console.log('Resultado de MailerLite:', result)
     } catch (error) {
-      console.error('Error adding subscriber to MailerLite:', error)
+      console.error('Error al agregar suscriptor a MailerLite:', error)
     }
-  };
+  }
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     if ( environment === 'production' && !recaptchaToken ) {
