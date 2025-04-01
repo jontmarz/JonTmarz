@@ -11,6 +11,7 @@ import Dashboard from '../pages/Dashboard'
 import EditPost from '../pages/EditPost'
 import NewPost from '../pages/NewPost'
 import MasterclassWeb from '../pages/landings/WebinarWeb'
+import PolicyPrivacy from "../pages/PrivacyPolicy"
 import ErrorPage from '../pages/ErrorPage'
 
 export const router: RouteObject[] = [
@@ -65,6 +66,10 @@ export const router: RouteObject[] = [
     {
         path: "webinar-marketing-ia",
         element: <MasterclassWeb />
+    },
+    {
+        path: "policy-privacy",
+        element: <PolicyPrivacy />
     },
     {
         path: "*",

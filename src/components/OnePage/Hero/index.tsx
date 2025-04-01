@@ -58,6 +58,7 @@ const Hero: React.FC = () => {
                 variant="contained"
                 color="primary"
                 size="large"
+                startIcon={<Handshake className="w-5 h-5" />}
                 className="btn-primary"
               >
                 <Link to="contact" smooth={true} duration={500}>{t('buttons.hero')}</Link>
@@ -75,6 +76,7 @@ const Hero: React.FC = () => {
                 variant="contained"
                 color="primary"
                 size="large"
+                startIcon={<Handshake className="w-5 h-5" />}
                 className="btn-primary"
                 href="https://calendly.com/jontmarz/30min?back=1"
                 target='_blank'

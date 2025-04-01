@@ -9,4 +9,11 @@ export const webinar = {
         time: "Col 10am | Arg 11am | Mex 9am | Esp 5pm",
     },
     imgSpeaker: imgSpeaker,
-} 
+}
+
+export const dataContact = {
+    email: "help@jontmarz.com",
+    wa: "+57 3194356458",
+    address: "Cra 124 # 131 - 19 Bogotá - Colombia",
+    formURL: "https://jontmarz.com/#contact",
+}
