@@ -1,13 +1,13 @@
 import React from 'react'
 import { Box, Container, Typography, IconButton, Grid, Stack } from '@mui/material'
-import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp, EditCalendar, Facebook, TikTok } from '@mui/icons-material'
+import { socialMedia, certifications } from '../../config/variables'
 import { useTranslation } from 'react-i18next'
-import scrumBadge from '../../assets/scrum-foundation-certification-candidate.webp'
+import { Link } from 'react-router-dom'
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
-  const socialMedia = [
+  /* const socialMedia = [
     { name: 'LinkedIn', icon: LinkedIn, link: 'https://www.linkedin.com/in/john-tmarz/' },
     { name: 'Whatsapp', icon: WhatsApp, link: 'https://api.whatsapp.com/send?phone=573194356458&text=Hola%20%F0%9F%91%8B.%20Quiero%20iniciar%20un%20nuevo%20proyecto%20de%20desarrollo.%20' },
     { name: 'GitHub', icon: GitHub, link: 'https://github.com/jontmarz' },
@@ -16,11 +16,11 @@ const Footer: React.FC = () => {
     // { name: 'YouTube', icon: YouTube, link: 'https://www.youtube.com/user/hardjonedi' },
     { name: 'X', icon: X, link: 'https://twitter.com/JonTMarz' },
     { name: 'Calendly', icon: EditCalendar, link: 'https://calendly.com/jontmarz' },
-  ]
+  ] */
 
-  const certifications = [
+ /*  const certifications = [
     { name: 'Scrum Profesional', link: 'https://www.credly.com/badges/d77dc8d9-18d9-426f-b038-cb18eac840a4/public_url', badge: scrumBadge },
-  ]
+  ] */
 
   return (
     <Box
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <Grid item xs={12} sm={4}>
             <Typography variant="body2" align="center">
-              © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')}.
+              © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')} | <Link to="/policy-privacy">{t('footer.privacy')}</Link>.
             </Typography>
             </Grid>
         </Grid>

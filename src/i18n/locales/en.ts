@@ -184,7 +184,8 @@ export default {
   footer: {
     social: "Follow me on social networks",
     cert: "Certifications",
-    copyright: "All rights reserved"
+    copyright: "All rights reserved",
+    privacy: "Privacy Policy",
   },
   forms: {
     login: {

@@ -183,7 +183,8 @@ export default {
   footer: {
     social: "Sígueme en mis redes sociales",
     cert: "Certificaciones",
-    copyright: "Todos los derechos reservados"
+    copyright: "Todos los derechos reservados",
+    privacy: "Política de Privacidad",
   },
   forms: {
     login: {

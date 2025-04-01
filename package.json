@@ -18,6 +18,7 @@
     "@mui/lab": "^6.0.0-beta.20",
     "@mui/material": "^6.2.1",
     "@mui/x-data-grid": "^7.23.3",
+    "@netlify/functions": "^3.0.4",
     "@tiptap/extension-color": "^2.11.5",
     "@tiptap/extension-image": "^2.11.5",
     "@tiptap/extension-placeholder": "^2.11.5",
