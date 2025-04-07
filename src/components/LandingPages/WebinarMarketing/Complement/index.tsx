@@ -14,8 +14,9 @@ const ComplementSections = ({ setShowPopup }: HeroProps) => {
         <ul className="list-disc list-inside space-y-2">
           <li>✅ Si eres emprendedor y quieres vender productos o servicios online.</li>
           <li>✅ Si trabajas en marketing y quieres sistematizar tus procesos.</li>
+          <li>✅ Eres comunicador y quieres crear contenidos memorables, textos impactantes o imagenes increibles.</li>
           <li>✅ Si formas parte de una agencia que necesita ofrecer sitios automatizados a clientes.</li>
-          <li>✅ O simplemente si quieres lanzar tu primer sitio sin depender de un programador.</li>
+          <li>✅ O simplemente si quieres lanzar tu primer negocio y no quieres depender de expertos.</li>
         </ul>
         <p className="mt-4 font-semibold">
           Este webinario es para ti si quieres empezar <span className="text-yellow-300">YA</span> a tener resultados digitales medibles.

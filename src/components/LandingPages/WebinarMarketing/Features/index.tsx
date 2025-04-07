@@ -55,7 +55,7 @@ function FeaturesSection({ setShowPopup }: BtnProps) {
                 <Zap className="w-6 h-6 text-blue-400 flex-shrink-0" />
                 <div>
                 <h4 className="text-lg font-semibold mb-2">Desarrollo Web Acelerado</h4>
-                <p className="text-gray-300">Crea sitios web profesionales en una fracción del tiempo tradicional.</p>
+                <p className="text-gray-300">Crea sitios web profesionales en una fracción del tiempo tradicional <strong>sin código</strong>.</p>
                 </div>
             </div>
             <div className="flex items-start gap-4">

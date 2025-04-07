@@ -8,11 +8,16 @@ const ContentCTAComponent: React.FC<ContentCTAProps> = ({ onClick }) => {
     return (
         <>
         <div className="mb-10">
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-left">
-                🗓️ Fecha del Webinario: <strong>{ webinar.when.date }</strong><br />
-                ⏰ Hora: <strong>{ webinar.when.time }</strong><br />
-                📍 <strong>100% Online</strong> - Acceso Gratuito con Registro<br />
-            </p>
+            <div>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto text-left leading-loose">
+                <span className="text-[#CCA70A]">🗓️ Fecha del Webinario:</span> <strong>{ webinar.when.date }</strong><br />
+                </p><p className="text-xl text-gray-300 max-w-2xl mx-auto text-left leading-loose">
+                <span className="text-[#CCA70A]">⏰ Hora:</span> <span><strong>COL/PER/MIA </strong><span className="text-[#CCA70A]">{Number(webinar.when.time)}hr</span> | <strong>ARG/CHI </strong><span className="text-[#CCA70A]">{Number(webinar.when.time) + 1}hr</span> | <strong>MEX </strong><span className="text-[#CCA70A]">{Number(webinar.when.time) - 1}hr</span> | <strong>ESP </strong><span className="text-[#CCA70A]">{Number(webinar.when.time) + 7}hr</span> </span><br />
+                </p>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-left leading-loose">
+                    <span className="text-[#CCA70A]">📍 <strong>100% Online</strong> - Acceso Gratuito con Registro<br /></span>
+                </p>
+            </div>
             <div className="flex gap-4 justify-center max-[584px]:flex-col">
                 <button
                 onClick={() => {

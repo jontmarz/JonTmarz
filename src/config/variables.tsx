@@ -7,15 +7,16 @@ export const webinar = {
     bgHeroImage: bgHeroImage,
     urlWA: "https://chat.whatsapp.com/EJYPlgBKuzHItOBUUR21Ct",
     when: {
-        date: "15 de abril de 2025",
-        time: "Col 10am | Arg 11am | Mex 9am | Esp 5pm",
+        date: "18 de abril de 2025",
+        time: 11,
     },
     imgSpeaker: imgSpeaker,
 }
 
 export const dataContact = {
     email: "help@jontmarz.com",
-    wa: "+57 3194356458",
+    wa: "+57 319 435 6458",
+    msjwa: "&text=Hola%20%F0%9F%91%8B.%20Tengo%20preguntas%20sobre%20la%20Politica%20de%20Privacidad.%20",
     address: "Cra 124 # 131 - 19 Bogotá - Colombia",
     formURL: "https://jontmarz.com/#contact",
 }

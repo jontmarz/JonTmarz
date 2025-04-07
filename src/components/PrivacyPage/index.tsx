@@ -22,7 +22,7 @@ function Sidebar() {
     { title: 'Cambios en Esta Política de Privacidad', icon: <Settings className="w-5 h-5" />, id: 'cambios' },
     { title: 'Legislación Aplicable', icon: <Smile className="w-5 h-5" />, id: 'legislacion' },
     { title: 'Contáctenos', icon: <Contact className="w-5 h-5" />, id: 'contacto' },
-  ];
+  ]
 
   return (
     <Box
@@ -294,7 +294,7 @@ function PrivacyPolicy() {
               </Typography>
               <List sx={{ pl: 4, color: 'gray.300' }}>
                 <ListItem sx={{display: "block"}}><span className="font-bold text-white">•	Correo electrónico: </span><Link to={`mailto:${dataContact.email}`}>{dataContact.email}</Link></ListItem>
-                <ListItem sx={{display: "block"}}><span className="font-bold text-white">•	WhatsApp:</span> <Link to={`https://wa.me/${dataContact.wa}`} target="_blank" rel="noopener noreferrer">Jon Tmarz</Link></ListItem>
+                <ListItem sx={{display: "block"}}><span className="font-bold text-white">•	WhatsApp:</span> <Link to={`https://api.whatsapp.com/send?phone=${dataContact.wa.replace(/\D/g, "") + dataContact.msjwa}`} target="_blank" rel="noopener noreferrer">{ dataContact.wa }</Link></ListItem>
                 <ListItem sx={{display: "block"}}><span className="font-bold text-white">•	Formulario de contacto:</span> <Link to="/#contact">Contacto</Link></ListItem>
               </List>
             </Box>
