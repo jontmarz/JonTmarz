@@ -7,7 +7,7 @@ export const webinar = {
     bgHeroImage: bgHeroImage,
     urlWA: "https://chat.whatsapp.com/EJYPlgBKuzHItOBUUR21Ct",
     when: {
-        date: "18 de abril de 2025",
+        date: "16 de abril de 2025",
         time: 11,
     },
     imgSpeaker: imgSpeaker,

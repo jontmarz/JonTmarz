@@ -10,10 +10,10 @@ const SpeakerSection = () => {
                 {/* Contenido de texto */}
                 <div className="md:w-2/3">
                 <h2 className="text-2xl font-bold mb-4 text-[#CCA70A]">
-                    👤 Tu Panelista: Jon, Ingeniero de Software & Estratega Digital
+                    👤 Tu Panelista: John E. Torres, Ingeniero de Software & Estratega Digital
                 </h2>
                 <p className="text-white-700 mb-4">
-                    Soy Jon, ingeniero de software y estratega digital con una visión disruptiva. A lo largo de mi carrera, he transformado la manera en que emprendedores, marketeros y agencias se enfrentan al mundo digital, fusionando innovación, inteligencia artificial y metodologías comprobadas para impulsar negocios.
+                    Soy John Torres, ingeniero de software y estratega digital con una visión disruptiva. A lo largo de mi carrera, he transformado la manera en que emprendedores, marketeros y agencias se enfrentan al mundo digital, fusionando innovación, inteligencia artificial y metodologías comprobadas para impulsar negocios.
                 </p>
                 <p className="text-white-700 mb-4">
                     En este webinario descubrirás un enfoque integral y dinámico que te permitirá lanzar sitios web que operan en piloto automático las 24 horas del día, maximizando tus ventas y optimizando tus procesos. Mi misión es brindarte las herramientas esenciales para destacar en el competitivo entorno digital.

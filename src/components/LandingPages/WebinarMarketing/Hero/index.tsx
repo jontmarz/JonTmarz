@@ -19,10 +19,10 @@ function HeroSection({ setShowPopup }: BtnProps) {
             <Bot className="w-16 h-16 text-blue-400" />
           </div>
           <h1 className="text-5xl font-bold mb-6 text-[#CCA70A]">
-            Lanza tu Negocio con IA <br />y Automatiza tus Crecimiento Digital 🚀
+            Lanza tu Negocio con IA <br />y Automatiza tu Crecimiento Digital 🚀
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Webinario Gratuito para Emprendedores, Marketeros y Agencias de Marketing y Agencias de Comunicación
+            Webinar Gratuito para Emprendedores, Marketeros y Agencias de Marketing y Agencias de Comunicación
           </p>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-left">
             Aprende en vivo cómo crear contenidos digitales desde un sitio web optimizado, generar contenido automatizado y convertir visitantes en clientes sin saber programar.
