@@ -4,6 +4,7 @@ import FeaturesSection from '../../components/LandingPages/WebinarMarketing/Feat
 import SpeakerSection from '../../components/LandingPages/WebinarMarketing/Speaker'
 import ModalFormSection from '../../components/LandingPages/WebinarMarketing/ModalForm'
 import ComplementSections from '../../components/LandingPages/WebinarMarketing/Complement'
+import Form from '../../components/LandingPages/WebinarMarketing/Form'
 import Footer from '../../components/Footer'
 
 function WebinarWeb() {
@@ -17,6 +18,7 @@ function WebinarWeb() {
         <SpeakerSection />
         <ComplementSections setShowPopup={setShowPopup} />
         <ModalFormSection showPopup={showPopup} setShowPopup={setShowPopup}/>
+        <Form />
         <Footer />
       </div>
     </div>
