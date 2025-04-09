@@ -1,10 +1,11 @@
 import { webinar } from '../../../../config/variables'
 
 interface ContentCTAProps {
-    onClick: () => void;
+    onClick: () => void
 }
 
 const ContentCTAComponent: React.FC<ContentCTAProps> = ({ onClick }) => {
+
     return (
         <>
         <div className="mb-10">
@@ -19,12 +20,23 @@ const ContentCTAComponent: React.FC<ContentCTAProps> = ({ onClick }) => {
                 </p>
             </div>
             <div className="flex gap-4 justify-center max-[584px]:flex-col">
-                <button
-                onClick={() => {
-                    if (typeof (window as any).ml !== 'undefined') {
-                      (window as any).ml('show', 'Cffm3p', true)} else {console.log('Error loading')}
+                {/* <button
+                    onClick={() => {
+                        if (typeof (window as any).ml !== 'undefined') {
+                        (window as any).ml('show', 'Cffm3p', true)} else {console.log('Error loading')}
                     }}
-                className="bg-[#F4CE2C] hover:bg-[#F4CE2C]/70 text-black px-8 py-3 rounded-lg font-semibold transition ml-onclick-form"
+                    className="bg-[#F4CE2C] hover:bg-[#F4CE2C]/70 text-black px-8 py-3 rounded-lg font-semibold transition ml-onclick-form"
+                >
+                ¡Reserva tu lugar ahora!
+                </button> */}
+                <button
+                    onClick={() => {
+                        const formElement = document.getElementById('webinarForm')
+                        if (formElement) {
+                        formElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
+                    className="bg-[#F4CE2C] hover:bg-[#F4CE2C]/70 text-black px-8 py-3 rounded-lg font-semibold transition ml-onclick-form"
                 >
                 ¡Reserva tu lugar ahora!
                 </button>

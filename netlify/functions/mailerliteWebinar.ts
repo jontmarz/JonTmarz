@@ -2,10 +2,9 @@ import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 import MailerLite from '@mailerlite/mailerlite-nodejs'
 
 interface FormData {
-  from_name: string
-  email_address: string
-  phone_number: string
-  message: string
+  name: string
+  email: string
+  phone: string
 }
 
 interface SubscriberData {
@@ -14,7 +13,7 @@ interface SubscriberData {
     name: string
     last_name: string
     phone: string
-  };
+  }
   groups: string[]
 }
 
@@ -39,12 +38,12 @@ export const handler: Handler = async (
     }
 
     // Parsear los datos del formulario
-    const data: FormData = JSON.parse(event.body);
+    const data: FormData = JSON.parse(event.body)
 
     // Procesar el nombre para separar firstName y lastName
-    const nameParts = data.from_name.trim().split(/\s+/);
-    let firstName = '';
-    let lastName = '';
+    const nameParts = data.name.trim().split(/\s+/)
+    let firstName = ''
+    let lastName = ''
 
     if (nameParts.length === 1) {
       firstName = nameParts[0]
@@ -58,30 +57,33 @@ export const handler: Handler = async (
 
     // Configurar el suscriptor
     const subscriberData: SubscriberData = {
-      email: data.email_address,
+      email: data.email,
       fields: {
         name: firstName,
         last_name: lastName,
-        phone: data.phone_number,
+        phone: data.phone,
       },
-      groups: process.env.VITE_MAILERLITE_GROUPS
-        ? process.env.VITE_MAILERLITE_GROUPS.split(',').map((g) => g.trim())
+      groups: process.env.VITE_MAILERLITE_WEBINAR_GROUP
+        ? process.env.VITE_MAILERLITE_WEBINAR_GROUP.split(',').map((g) => g.trim())
         : [],
     };
 
     // Obtener la API key de MailerLite desde las variables de entorno
-    const apiKey = process.env.VITE_MAILERLITE_API_KEY;
+    const apiKey = process.env.VITE_MAILERLITE_API_KEY
     if (!apiKey) {
-      throw new Error('Missing MailerLite API key');
+      throw new Error('Missing MailerLite API key')
     }
-    const mailerLite = new MailerLite({ api_key: apiKey });
+    const mailerLite = new MailerLite({ api_key: apiKey })
 
     // Agregar o actualizar el suscriptor
-    await mailerLite.subscribers.createOrUpdate(subscriberData);
+    await mailerLite.subscribers.createOrUpdate(subscriberData)
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Subscriber added successfully' }),
+      body: JSON.stringify({
+        message: 'Subscriber added successfully',
+        group: subscriberData.groups,
+        code: 200}),
     };
   } catch (error: any) {
     console.error('Error en la función MailerLite:', error);
@@ -89,6 +91,7 @@ export const handler: Handler = async (
       statusCode: 500,
       body: JSON.stringify({
         error: error.message || 'Internal Server Error',
+        code: 500,
       }),
     };
   }

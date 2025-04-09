@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
   // reCAPTCHA callback
   const onReCAPTCHAChange = (token: string | null) => {
     // console.log('reCAPTCHA token:', token); // Verifica si el token se genera
-    setRecaptchaToken(token);
+    setRecaptchaToken(token)
   };
 
   const addMailerLite = async (data: FormData): Promise<void> => {
