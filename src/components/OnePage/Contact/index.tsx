@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import ContactForm from './ContactForm'
+import ContactForm from './ContactFormMailerLite'
 import { Grid, Container, Button, Typography, Box } from '@mui/material'
 import { motion } from 'framer-motion'
 import { FileDown, CalendarSearch } from 'lucide-react'

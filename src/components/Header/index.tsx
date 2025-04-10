@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../LanguageSwitcher'
-import Logo from '../../assets/logo.webp'
+import Logo from '../../assets/nuevo_logo-dark.webp'
 // import styled from "@emotion/styled"
 
 /* const Button = styled("button")({

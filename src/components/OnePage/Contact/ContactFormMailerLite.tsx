@@ -43,15 +43,15 @@ const ContactForm: React.FC = () => {
   }
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    if ( environment === 'production' && !recaptchaToken ) {
-    // if ( !recaptchaToken ) {
+    if (environment === 'production' && !recaptchaToken) {
+      // if ( !recaptchaToken ) {
       setStatusMessage(t('contact.form.ht.recaptcha')); // Mensaje de error si no hay token
       return
     }
 
     // Agregar el token de reCAPTCHA al formulario como un campo oculto
     if (formRef.current) {
-      
+
       if (environment === 'production') {
         let recaptchaInput: HTMLInputElement | string = ''
         recaptchaInput = document.createElement('input')
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Box
-      component= "form"
+      component="form"
       ref={formRef}
       onSubmit={handleSubmit(onSubmit)}
       sx={{ mb: '2em', display: "flex", flexDirection: "column", gap: 2 }}
@@ -99,15 +99,15 @@ const ContactForm: React.FC = () => {
       <Typography component="p" gutterBottom className='text-center'>
         {t('contact.text')}
       </Typography>
-    
+
       {/* Name field */}
       <TextField
         label={t('contact.form.name')}
         {...register('from_name', { required: true })}
         fullWidth
       />
-      {errors.from_name && <Typography component="span" sx={{color: "red", fontSize: 10}}>{t('contact.form.ht.name')}</Typography>}
-    
+      {errors.from_name && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.name')}</Typography>}
+
       {/* Email field */}
       <TextField
         label={t('contact.form.email')}
@@ -120,8 +120,8 @@ const ContactForm: React.FC = () => {
         })}
         fullWidth
       />
-      {errors.email_address && <Typography component="span" sx={{color: "red", fontSize: 10}}>{t('contact.form.ht.email')}</Typography>}
-    
+      {errors.email_address && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.email')}</Typography>}
+
       {/* Phone field */}
       <TextField
         label={t('contact.form.phone')}
@@ -134,8 +134,8 @@ const ContactForm: React.FC = () => {
         })}
         fullWidth
       />
-      {errors.phone_number && <Typography component="span" sx={{color: "red", fontSize: 10}}>{t('contact.form.ht.phone')}</Typography>}
-    
+      {errors.phone_number && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.phone')}</Typography>}
+
       {/* Message field */}
       <TextField
         label={t('contact.form.message')}
@@ -144,7 +144,12 @@ const ContactForm: React.FC = () => {
         rows={4}
         fullWidth
       />
-      {errors.message && <Typography component="span" sx={{color: "red", fontSize: 10}}>{t('contact.form.ht.message')}</Typography>}
+      {errors.message && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.message')}</Typography>}
+ 
+      {/* Privacy Policy */}
+      <Typography component="p" gutterBottom className='text-white font-bold' sx={{ fontSize: 12 }}>
+        Al enviar este formulario, aceptas nuestra <a href="https://jontmarz.com/policy-privacy/" target="_blank" rel="noopener noreferrer" className='text-[#CCA70A] underline'>Política de Privacidad</a>.
+      </Typography>
 
       {/* reCAPTCHA */}
       {environment === 'production' && (
@@ -154,20 +159,20 @@ const ContactForm: React.FC = () => {
           onChange={onReCAPTCHAChange}
         />
       )}
-      
-        {/* Submit button */}
+
+      {/* Submit button */}
       <Button variant="contained" color="primary" type="submit" sx={{ maxWidth: '150px' }}>
         {t('contact.form.button')}
       </Button>
 
       {/* State Message */}
       {statusMessage &&
-        <Typography component="span" sx={{ color: statusMessage === t('contact.form.success') ? "#CCA70A" : "red", fontSize: 10}}>
+        <Typography component="span" sx={{ color: statusMessage === t('contact.form.success') ? "#CCA70A" : "red", fontSize: 10 }}>
           {statusMessage}
         </Typography>
       }
     </Box>
   );
 };
-  
+
 export default ContactForm

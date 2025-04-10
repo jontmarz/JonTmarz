@@ -136,6 +136,9 @@ const webinarForm: React.FC = () => {
                         error={!!errors.email}
                         helperText={errors.email ? 'Campo requerido' : ''}
                     />
+                    <Typography component="p" gutterBottom className='text-white font-bold'sx={{ fontSize: 12 }}>
+                        Al enviar este formulario, aceptas nuestra <a href="https://jontmarz.com/policy-privacy/" target="_blank" rel="noopener noreferrer" className='text-[#CCA70A] underline'>Política de Privacidad</a>.
+                    </Typography>
                     {/* reCAPTCHA */}
                     {environment === 'production' && (
                         <ReCAPTCHA

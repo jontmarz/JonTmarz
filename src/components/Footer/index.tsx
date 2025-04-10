@@ -3,6 +3,7 @@ import { Box, Container, Typography, IconButton, Grid, Stack } from '@mui/materi
 import { socialMedia, certifications } from '../../config/variables'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import logo from '/src/assets/nuevo_logo3.webp'
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -74,9 +75,21 @@ const Footer: React.FC = () => {
 
           {/* Copyright */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="body2" align="center">
-              © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')} | <Link to="/policy-privacy">{t('footer.privacy')}</Link>.
-            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+              {/* Logo */}
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                <img 
+                  src={logo} 
+                  alt="Jon Tmarz Logo" 
+                  style={{ height: 100, }} 
+                />
+              </Link>
+              
+              {/* Copyright */}
+              <Typography variant="body2" align="center">
+                © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')} | <Link to="/policy-privacy">{t('footer.privacy')}</Link>.
+              </Typography>
+            </Box>
             </Grid>
         </Grid>
 
