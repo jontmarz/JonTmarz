@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { Box, TextField, Button, Typography, Grid } from '@mui/material'
 import ReCAPTCHA from "react-google-recaptcha"
 import bgForm from "../../../../assets/landingpages/bg-webinar-web-form.webp"
+import Calendar from '../Calendar'
 
 interface FormData {
     name: string
@@ -154,6 +155,9 @@ const webinarForm: React.FC = () => {
                         </Typography>
                     }
                 </Box>
+            </Grid>
+            <Grid item xs={12} className="z-[10]">
+                <Calendar />
             </Grid>
         </Grid>
     )

@@ -7,10 +7,19 @@ export const webinar = {
     bgHeroImage: bgHeroImage,
     urlWA: "https://chat.whatsapp.com/EJYPlgBKuzHItOBUUR21Ct",
     when: {
-        date: "16 de abril de 2025",
+        date: [2025, 4, 16],
         time: 11,
     },
     imgSpeaker: imgSpeaker,
+    meetLink: "https://meet.google.com/ovh-eqbc-byw",
+    speakers: [
+        {
+            name: "John E. Torres M.",
+            role: "Ingeniero de Software, Desarrollador Web y Especialista en IA",
+            bio: "Soy un apasionado del desarrollo web y la inteligencia artificial. Me dedico a ayudar a emprendedores a lanzar sus negocios digitales.",
+            img: imgSpeaker,
+        },
+    ],
 }
 
 export const dataContact = {
