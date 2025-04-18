@@ -7,11 +7,11 @@ export const webinar = {
     bgHeroImage: bgHeroImage,
     urlWA: "https://chat.whatsapp.com/EJYPlgBKuzHItOBUUR21Ct",
     when: {
-        date: [2025, 4, 16],
+        date: [2025, 4, 30],
         time: 11,
     },
     imgSpeaker: imgSpeaker,
-    meetLink: "https://meet.google.com/ovh-eqbc-byw",
+    meetLink: "https://meet.google.com/oer-ewch-uvj",
     speakers: [
         {
             name: "John E. Torres M.",

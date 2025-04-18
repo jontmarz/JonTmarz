@@ -12,7 +12,7 @@ interface Speaker {
 // Función para formatear la fecha como texto en español
 const formatDate = (dateArray: number[]): string => {
     const [year, month, day] = dateArray
-    const date = new Date(year, month, day)
+    const date = new Date(year, month -1, day)
     return date.toLocaleDateString('es-ES', {
         year: 'numeric',
         month: 'long',
