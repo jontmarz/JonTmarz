@@ -9,7 +9,7 @@ import ProjectTabs from './ProjectTabs'
 import { Project } from '../../../types'
 
 const Portfolio: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('OnePage')
   const [activeCategory, setActiveCategory] = useState('VueJS')
 
   const projectImages = import.meta.glob('../../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true })

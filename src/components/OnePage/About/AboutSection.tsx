@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Typography } from '@mui/material';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { Typography } from '@mui/material'
 
 interface AboutSectionProps {
   title: string;
@@ -28,7 +28,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ title, description, icon, d
         <span className="text-2xl">{icon}</span>
         {title}
       </Typography>
-      <Typography variant="body1" className="text-tertiary font-montserrat">
+      <Typography variant="body1" className="text-tertiary font-montserrat" style={{ marginLeft: '1em', marginRight: '1em' }}>
         {description}
       </Typography>
     </motion.div>

@@ -12,7 +12,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('OnePage');
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

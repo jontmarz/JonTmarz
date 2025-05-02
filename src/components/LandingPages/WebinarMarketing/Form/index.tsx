@@ -26,8 +26,32 @@ const webinarForm: React.FC = () => {
         setRecaptchaToken(token)
     }
 
-    const addMailerLite = async (data: FormData): Promise<void> => {
+    const addMake = async (data: FormData): Promise<void> => {
+        // Automatización Make y Google Meet
+        const makeWebhook = import.meta.env.VITE_MAKE_WEBHOOK_WEBINAR
 
+        if (makeWebhook) {
+            try {
+                const res = await fetch(makeWebhook, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                }),
+                });
+            
+                // respuesta
+                const webhookResult = await res.json()
+                console.log('Webhook response:', webhookResult)
+
+            } catch (error) {
+                console.error('Error al llamar al webhook:', error)
+            }
+        }
+    }
+
+    const addMailerLite = async (data: FormData): Promise<void> => {
         try {
             const res = await fetch('/.netlify/functions/mailerliteWebinar', {
                 method: 'POST',
@@ -63,6 +87,7 @@ const webinarForm: React.FC = () => {
                 formRef.current.appendChild(recaptchaInput)
             }
         }
+        addMake(data)
         addMailerLite(data)
     }
 

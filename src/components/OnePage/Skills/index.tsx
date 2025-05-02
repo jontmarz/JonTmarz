@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Skill } from '../../../types'
 
 const Skills: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('OnePage')
   const skills: Record<string, Skill[]> = {
     'Languages & Frameworks': [
       { name: 'JavaScript', progress: 90, category: 'language' },

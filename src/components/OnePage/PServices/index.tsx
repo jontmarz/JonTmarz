@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { HandHelping } from 'lucide-react'
 
 const Services: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('OnePage')
   const services = [
     {
       icon: '🏗️',
