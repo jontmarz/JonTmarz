@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, Bot, FileText, Shield, Mail, HelpCircle, Lightbulb, MoveUp, Info, Cloud, Gavel, Pin, Cookie, Wrench, User, Check, Settings, Smile, Contact } from 'lucide-react'
 import { Container, Typography, Box, List, ListItem, ListItemIcon, ListItemText, Paper } from '@mui/material'
 import { dataContact } from '../../config/variables'
-import Footer from '../Footer'
+import Footer from '../Layouts/Footer'
 
 function Sidebar() {
   const policyItems = [

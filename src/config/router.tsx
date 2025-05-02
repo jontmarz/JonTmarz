@@ -3,14 +3,16 @@ import { UserContextProvider } from "../context/UserContext"
 import RootLayout from '../layout/RootLayout'
 import PrivateLayout from '../layout/PrivateLayout'
 import Home from '../pages/Home'
-import Blog from '../pages/Blog'
-import SinglePost from '../pages/SinglePost'
-import Login from '../pages/Login'
-import Signup from '../pages/Signup'
-import Dashboard from '../pages/Dashboard'
-import EditPost from '../pages/EditPost'
-import NewPost from '../pages/NewPost'
-import MasterclassWeb from '../pages/landings/WebinarWeb'
+import Blog from '../pages/Blog/Blog'
+import SinglePost from '../pages/Blog/SinglePost'
+import Login from '../pages/BackOffice/Login'
+import Signup from '../pages/BackOffice/Signup'
+import Dashboard from '../pages/BackOffice/Dashboard'
+import EditPost from '../pages/Blog/EditPost'
+import NewPost from '../pages/Blog/NewPost'
+import MarketingIA from '../pages/Courses/MarketingIA'
+import DLauncerGPT from '../pages/GPTs/DigitalLaunch'
+import MasterclassWeb from '../pages/Landings/WebinarWeb'
 import PolicyPrivacy from "../pages/PrivacyPolicy"
 import ErrorPage from '../pages/ErrorPage'
 
@@ -22,6 +24,14 @@ export const router: RouteObject[] = [
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path: "mia-course",
+                element: <MarketingIA />
+            },
+            {
+                path: "digital-launcher-gpt",
+                element: <DLauncerGPT />
             },
             {
                 path: "blog",

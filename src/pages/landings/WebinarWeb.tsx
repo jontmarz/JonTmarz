@@ -5,7 +5,7 @@ import SpeakerSection from '../../components/LandingPages/WebinarMarketing/Speak
 import ModalFormSection from '../../components/LandingPages/WebinarMarketing/ModalForm'
 import ComplementSections from '../../components/LandingPages/WebinarMarketing/Complement'
 import Form from '../../components/LandingPages/WebinarMarketing/Form'
-import Footer from '../../components/Footer'
+import Footer from '../../components/Layouts/Footer'
 
 function WebinarWeb() {
   const [showPopup, setShowPopup] = useState(false)

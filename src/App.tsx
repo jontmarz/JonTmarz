@@ -4,6 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline'
 // import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { router } from "./config/router"
+import { createMenus, menus } from './config/variablesHeader';
+import { useTranslation } from 'react-i18next';
 
 const theme = createTheme({
   palette: {
@@ -34,6 +36,11 @@ const theme = createTheme({
 });
 
 function App() {
+  const { t } = useTranslation('OnePage');
+  
+  // Initialize menus with translations
+  Object.assign(menus, createMenus(t));
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

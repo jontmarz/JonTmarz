@@ -1,4 +1,4 @@
-import NewPostComponent from '../components/Private/NewPost'
+import NewPostComponent from '../../components/Private/NewPost'
 
 const EditPost: React.FC = () => {
     return (

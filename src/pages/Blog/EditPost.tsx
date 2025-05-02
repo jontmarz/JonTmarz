@@ -1,4 +1,4 @@
-import EditPostComponent from '../components/Private/EditPost'
+import EditPostComponent from '../../components/Private/EditPost'
 // import { useParams } from "react-router-dom"
 
 const EditPost: React.FC = () => {

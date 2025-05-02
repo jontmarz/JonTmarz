@@ -1,4 +1,4 @@
-import DashboardComponent from '../components/Private/Dashboard'
+import DashboardComponent from '../../components/Private/Dashboard'
 
 function Dashboard() {
   return (

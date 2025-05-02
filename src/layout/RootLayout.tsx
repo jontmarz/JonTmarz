@@ -1,19 +1,35 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import { Container } from "@mui/material"
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import Header from '../components/Layouts/Root/Header';
+import { MenuType } from '../config/variablesHeader';
+import Footer from '../components/Layouts/Footer'
 
 const RootLayout: React.FC = () => {
-    return (
-        <Container maxWidth="xl" sx={{ mx: "auto", p: "0 !important", }}>
-            <Header />
-            <div className="min-h-screen">
-                <Outlet />
-            </div>
-            <Footer />
-        </Container>
-    )
-}
+    const location = useLocation();
 
-export default RootLayout
+    // Determinar qué menú usar basado en la ruta actual
+    const getMenuType = (): MenuType => {
+        switch (true) {
+            case location.pathname.startsWith('/blog'):
+                return 'blog';
+            case location.pathname.startsWith('/mia-course'):
+                return 'miaCourse';
+            case location.pathname.startsWith('/digital-launcher-gpt'):
+                return 'gtpLDigital';
+            default:
+                return 'default';
+        }
+    };
+
+    return (
+        <>
+            <Header menuType={getMenuType()} />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
+        </>
+    );
+};
+
+export default RootLayout;

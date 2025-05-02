@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { api } from '../config/axios'
+import { api } from '../../config/axios'
 import { useParams } from "react-router-dom"
 import { CircularProgress } from '@mui/material'
-import SinglePostComponent from '../components/SinglePost'
+import SinglePostComponent from '../../components/SinglePost'
 
 const SinglePost: React.FC = () => {
     const { idBlog } = useParams<{ idBlog: string }>()

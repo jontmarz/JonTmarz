@@ -1,14 +1,14 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Header from './components/Header';
+import Header from './components/Layouts/Root/Header';
 import Hero from './components/OnePage/Hero';
 import About from './components/OnePage/About';
-import Services from './components/OnePage/Services';
+import Services from './components/OnePage/PServices';
 import Portfolio from './components/OnePage/Portfolio';
 import Skills from './components/OnePage/Skills';
 import Contact from './components/OnePage/Contact';
-import Footer from './components/Footer';
+import Footer from './components/Layouts/Footer';
 
 
 const theme = createTheme({

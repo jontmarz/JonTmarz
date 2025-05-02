@@ -1,4 +1,3 @@
-import { button, title } from "framer-motion/client";
 
 export default {
   navbar: {
@@ -12,26 +11,49 @@ export default {
     login: "Login"
   },
   hero: {
-    greeting: "Hola, soy Jon Tmarz",
+    greeting: "Hola, soy John E. Torres M.",
     title: "Ingeniero de Software y Desarrollador Full Stack",
-    description: "con más de 6 años de experiencia. Mi pasión es crear soluciones digitales innovadoras que conecten con las personas."
+    description: "con más de 9 años de experiencia. Mi pasión es crear soluciones digitales innovadoras que conecten con las personas."
   },
   about: {
     title: "Sobre Mí",
-    work: "Mi trabajo abarca desde la creación de interfaces atractivas y funcionales hasta la construcción de sistemas robustos en el backend. Domino tecnologías como PHP, JavaScript, VueJS, ReactJS, NodeJS, Firebase, MySQL, MongoDB y WordPress, además de manejar API Rest y servicios web modernos.",
-    ai: "También tengo conocimientos en Python, lenguaje R y desarrollo en Inteligencia Artificial, explorando constantemente herramientas como GPT para crear soluciones innovadoras.",
-    teamwork: {
-      title: "Trabajo en equipo y liderazgo",
-      description: "Me adapto con facilidad a equipos de trabajo y disfruto liderar proyectos, compartiendo conocimientos y aprendiendo de mis compañeros."
-    },
-    passion: {
-      title: "Amante del Frontend y la tecnología",
-      description: "Aunque me encanta diseñar experiencias de usuario en el frontend, también disfruto resolver problemas complejos en el backend. Mi enfoque está en crear productos que no solo sean funcionales, sino que también conecten con las personas."
-    },
-    learning: {
-      title: "Siempre aprendiendo",
-      description: "Estoy en constante búsqueda de nuevas oportunidades para mejorar mis habilidades, crecer profesionalmente y marcar la diferencia en cada proyecto."
-    }
+    paragraph: [
+      {
+        title: "Desarrollador Full Stack & Especialista en IA",
+        description: "Como <span class=\"text-[#00AAFF]\">Ingeniero de Software</span>, mi trabajo abarca desde la creación de interfaces atractivas y funcionales hasta la construcción de sistemas robustos en el backend. Domino tecnologías como <i>PHP, JavaScript, VueJS, ReactJS, NodeJS, Firebase, MySQL, MongoDB y WordPress</i>, además de manejar API Rest y servicios web modernos."
+      },
+      {
+        title: "Innovación en IA y Automatización",
+        description: "<b>Experto en Python y desarrollo en Inteligencia Artificial</b>, además de conocimientos en lenguaje R. Me especializo en crear soluciones innovadoras utilizando GPT y otras tecnologías de IA. Desarrollo bots inteligentes y sistemas de automatización que transforman procesos empresariales, mejorando la eficiencia y productividad."
+      },
+      {
+        title: "Educador Tecnológico",
+        description: "Apasionado por compartir conocimientos, <b>creo contenido educativo e imparto cursos en desarrollo web, IA, programación y marketing digital</b>. Te invito a explorar mis cursos y unirte a nuestra comunidad de aprendizaje. ¡Suscríbete para mantenerte actualizado con las últimas tendencias tecnológicas!"
+      },
+      {
+        title: "Amante del Frontend y la Tecnología",
+        description: "Aunque me encanta diseñar experiencias de usuario en el frontend, también disfruto resolver problemas complejos en el backend. Mi enfoque está en crear productos que no solo sean funcionales, sino que también conecten con las personas y mejoren su vida diaria."
+      },
+      {
+        title: "Trabajo en Equipo y Liderazgo",
+        description: "<b>Me adapto con facilidad a equipos de trabajo y disfruto liderar proyectos, compartiendo conocimientos y aprendiendo de mis compañeros</b>. Mi experiencia en gestión de equipos tecnológicos me permite crear ambientes colaborativos y productivos."
+      },
+      {
+        title: "Siempre Aprendiendo y Enseñando",
+        description: "Estoy en constante búsqueda de nuevas oportunidades para mejorar mis habilidades, crecer profesionalmente y marcar la diferencia en cada proyecto. Comparto mi viaje de aprendizaje a través de mis cursos y contenido educativo."
+      },
+      {
+        title: "¿Listo para aprender?",
+        description: "Descubre mis cursos y únete a nuestra comunidad <i>\"Innovación con IA\"</i>. ¡Juntos podemos llevar tus habilidades tecnológicas al siguiente nivel!"
+      }
+    ],
+  },
+  bannerCWeb: {
+    title: "Escala tu Negocio Digital con Automatización e",
+    highlight: "Inteligencia Artificial",
+    description: "Descubre cómo automatizar tareas, crear contenido con IA y vender en automático con herramientas simples y efectivas.",
+    cta: "Conoce el curso",
+    slots: "¡Plazas limitadas!",
   },
   services: {
     title: "Servicios",

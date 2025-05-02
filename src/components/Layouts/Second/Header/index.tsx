@@ -4,8 +4,8 @@ import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material"
 import { Link } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
 import { useTranslation } from 'react-i18next'
-import LanguageSwitcher from '../LanguageSwitcher'
-import Logo from '../../assets/nuevo_logo-dark.webp'
+import LanguageSwitcher from '../../../LanguageSwitcher'
+import Logo from '../../../../assets/nuevo_logo-dark.webp'
 // import styled from "@emotion/styled"
 
 /* const Button = styled("button")({
@@ -19,19 +19,19 @@ import Logo from '../../assets/nuevo_logo-dark.webp'
 }) */
 
 const Header: React.FC = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation('OnePage')
 
     const [scroll, setScroll] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
 
     const menuItems = [
-        { id: "Home", to:'hero', label: t("navbar.home") },
-        { id: "About", to:'about', label: t("navbar.about"), external: false },
-        { id: "Services", to:'services', label: t("navbar.services"), external: false },
-        { id: "Portfolio", to:'portfolio', label: t("navbar.portfolio"), external: false },
-        { id: "Skills", to:'skills', label: t("navbar.skills"), external: false },
+        { id: "Home", to:'hero', label: t("navbar.home2") },
+        { id: "About", to:'about', label: t("navbar.about"), external: false, className: "opacity-0" },
+        { id: "Services", to:'services', label: t("navbar.services"), external: false,  className: "opacity-0" },
+        { id: "Portfolio", to:'portfolio', label: t("navbar.portfolio"), external: false,  className: "opacity-0" },
+        { id: "Skills", to:'skills', label: t("navbar.skills"), external: false,  className: "opacity-0" },
         // { id: "Blog", to:'/blog', label: t("navbar.blog"), external: true },
-        { id: "Contact", to:'contact', label: t("navbar.contact"), external: false },
+        { id: "Contact", to:'/#contact', label: t("navbar.contact"), external: true },
         // { id: "Login", to:'/login', label: t("navbar.login"), external: true },
     ]
 
@@ -67,12 +67,18 @@ const Header: React.FC = () => {
     <>
         <AppBar position="fixed" color={scroll ? "primary" : "transparent"} sx={{ boxShadow: scroll ? '' : 'none', maxWidth: '1250px', left: "50%", transform: 'translate(-50%);', borderRadius: scroll ? '0 0 10px 10px' : '' }}>
             <Toolbar>
-                <Typography variant="h6" sx={{ flexGrow: 1, cursor: 'pointer' }}>
-                    <img src={Logo} alt="Logo" style={{ height: "80px" }} />
+                <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                    <RouterLink to="/">
+                        <img 
+                            src={Logo} 
+                            alt="Logo" 
+                            style={{ height: "80px", cursor: 'pointer' }} 
+                        />
+                    </RouterLink>
                 </Typography>
                 
                 {/* Desktop Menu */}
-                <div className="menu-desktop">
+                <div className="menu-desktop opacity-0">
                     {renderMenuItems()}
                 </div>
 

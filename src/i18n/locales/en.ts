@@ -11,26 +11,49 @@ export default {
     login: "Login"
   },
   hero: {
-    greeting: "Hi, I´m Jon Tmarz",
+    greeting: "Hi, I´m John E. Torres M.",
     title: "Software Engineer and Full Stack Developer",
     description: "with over 6 years of experience. My passion is creating innovative digital solutions that connect with people."
   },
   about: {
     title: "About Me",
-    work: "My work ranges from creating attractive and functional interfaces to building robust systems on the backend. I master technologies such as PHP, JavaScript, VueJS, ReactJS, NodeJS, Firebase, MySQL, MongoDB, and WordPress, in addition to handling REST APIs and modern web services.",
-    ai: "I also have knowledge in Python, R language, and Artificial Intelligence development, constantly exploring tools like GPT to create innovative solutions.",
-    teamwork: {
-      title: "Teamwork and leadership",
-      description: "I easily adapt to work teams and enjoy leading projects, sharing knowledge, and learning from my colleagues."
-    },
-    passion: {
-      title: "Lover of Frontend and technology",
-      description: "Although I love designing user experiences on the frontend, I also enjoy solving complex problems on the backend. My focus is on creating products that are not only functional but also connect with people."
-    },
-    learning: {
-      title: "Always learning",
-      description: "I am constantly seeking new opportunities to improve my skills, grow professionally, and make a difference in every project."
-    }
+    paragraph: [
+      {
+        title: "Full Stack Developer & AI Specialist",
+        description: "As <span class=\"text-[#00AAFF]\">Software Engineer</span>, my work ranges from creating attractive and functional interfaces to building robust backend systems. I master technologies such as <i>PHP, JavaScript, VueJS, ReactJS, NodeJS, Firebase, MySQL, MongoDB, and WordPress</i>, as well as handling REST APIs and modern web services."
+      },
+      {
+        title: "AI Innovation & Automation",
+        description: "<b>Expert in Python, R language, and Artificial Intelligence development</b>. I specialize in creating innovative solutions using GPT and other AI technologies. I develop intelligent bots and automation systems that transform business processes, improving efficiency and productivity."
+      },
+      {
+        title: "Technology Educator",
+        description: "Passionate about sharing knowledge, <b>I create educational content and teach courses in web development, AI, programming and Digital Marketing</b>. I invite you to explore my courses and join our learning community. Subscribe to stay updated with the latest technology trends!"
+      },
+      {
+        title: "Frontend & Technology Enthusiast",
+        description: "While I love designing user experiences on the frontend, I also enjoy solving complex backend challenges. My focus is on creating products that are not only functional but also connect with people and improve their daily lives."
+      },
+      {
+        title: "Teamwork & Leadership",
+        description: "<b>I easily adapt to work teams and enjoy leading projects, sharing knowledge, and learning from my colleagues</b>. My experience in managing technology teams allows me to create collaborative and productive environments."
+      },
+      {
+        title: "Always Learning & Teaching",
+        description: "I'm constantly seeking new opportunities to improve my skills, grow professionally, and make a difference in every project. I share my learning journey through my courses and educational content."
+      },
+      {
+        title: "Ready to Learn?",
+        description: "Discover my courses and join our community <i>\"Innovación con IA\"</i>. Together we can take your technology skills to the next level!"
+      }
+    ],
+  },
+  bannerCWeb: {
+    title: "Master Web Development with",
+    highlight: "Artificial Intelligence",
+    description: "Learn to create stunning websites using the latest AI tools. Practical course with lifetime access and official certificate.",
+    cta: "Enroll Now",
+    slots: "Limited slots available!",
   },
   services: {
     title: "Services",

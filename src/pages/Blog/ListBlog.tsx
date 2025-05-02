@@ -1,4 +1,4 @@
-import ListBlogComponent from '../components/Private/ListBlog'
+import ListBlogComponent from '../../components/Private/ListBlog'
 
 const ListBlog: React.FC = () => {
   return (
