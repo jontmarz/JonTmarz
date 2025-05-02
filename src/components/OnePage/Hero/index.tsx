@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 import { Handshake } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('OnePage');
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-primary bg-hero">

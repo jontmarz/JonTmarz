@@ -1,13 +1,39 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { Container, Typography, Button } from '@mui/material';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
+import { Container, Typography, Button } from '@mui/material'
 import { Link } from "react-scroll"
-import { ThumbsUp } from 'lucide-react';
-import AboutSection from './AboutSection';
+import { ThumbsUp } from 'lucide-react'
+import AboutSection from './AboutSection'
 
 const About: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('OnePage')
+
+  // Función para renderizar HTML desde un texto con posibles saltos de línea
+  const renderHTML = (text: string) => {
+    return text.split('\n').map((line, i) => (
+      <React.Fragment key={i}>
+        <div dangerouslySetInnerHTML={{ __html: line }} />
+        {i !== text.split('\n').length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+
+  // Obtenemos el array de párrafos directamente desde las traducciones
+  const paragraphs = t('about.paragraph', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+    icon?: string;
+  }>;
+
+  // Mapeamos los párrafos a los objetos que necesita AboutSection
+  // y preparamos el contenido HTML para ser renderizado
+  const aboutParagraphs = paragraphs.map((paragraph, index) => ({
+    title: renderHTML(paragraph.title),
+    description: renderHTML(paragraph.description),
+    icon: paragraph.icon || ["🖥️", "🤖", "👨‍🏫", "❤️", "👥", "🚀", "📚"][index % 7] || "✨",
+    delay: 0.2 + (index * 0.1),
+  }));
 
   return (
     <section id="about" className="section-padding bg-gradient-to-b from-primary to-accent">
@@ -27,40 +53,15 @@ const About: React.FC = () => {
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-            <div className='mt-4 flex flex-col justify-center'>
+            {aboutParagraphs.map((item, idx) => (
               <AboutSection
-                title=""
-                description={t('about.work')}
-                icon="👨🏽‍💻"
-                delay={0.2}
+                key={idx}
+                title={item.title}
+                description={item.description}
+                icon={item.icon}
+                delay={item.delay}
               />
-              <AboutSection
-                title=""
-                description={t('about.ai')}
-                icon="🤖"
-                delay={0.4}
-              />
-            </div>
-            <div className='mt-4'>
-              <AboutSection
-                title={t('about.teamwork.title')}
-                description={t('about.teamwork.description')}
-                icon="💼"
-                delay={0.6}
-              />
-              <AboutSection
-                title={t('about.passion.title')}
-                description={t('about.passion.description')}
-                icon="❤️"
-                delay={0.8}
-              />
-              <AboutSection
-                title={t('about.learning.title')}
-                description={t('about.learning.description')}
-                icon="🚀"
-                delay={1}
-              />
-            </div>
+            ))}
           </div>
           <div className="flex justify-center mt-4">
             <motion.div

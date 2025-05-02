@@ -15,7 +15,7 @@ interface FormData {
 const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null)
   const [statusMessage, setStatusMessage] = useState<string | null>(null)
-  const { t } = useTranslation()
+  const { t } = useTranslation('OnePage')
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
   const recaptchaRef = useRef<ReCAPTCHA>(null)
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
