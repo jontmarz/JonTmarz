@@ -81,10 +81,15 @@ export const webinar = {
 import bgheroDLGPT from '/src/assets/GPTs/bg-hero-gpt-digital-launcher.webp'
 import faviconDLGPT from '/src/assets/GPTs/favicon-digital-launcher.webp'
 import bgBenefit from '/src/assets/GPTs/bg-right-benefits.webp'
+import bgHowItWorks from '/src/assets/GPTs/bg-human-face-tech-blue_org.webp'
 
 export const DLauncerGPT = {
     bgHero: bgheroDLGPT,
     favicon: faviconDLGPT,
     urlDLG: 'https://chatgpt.com/g/g-67d2d0115cfc8191a96dbbab684712db-lanzador-digital',
-    bgBenefits: bgBenefit, 
+    bgBenefits: bgBenefit,
+    bgHowItWorks: bgHowItWorks,
+    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID", 
+    videoThumbnail: "https://via.placeholder.com/800x450",
+    contact: 'help@jontmarz.com'
 }

@@ -25,4 +25,5 @@ export default {
     },
   },
   plugins: [],
+  important: true, // This helps Tailwind CSS override Material UI styles when needed
 };
