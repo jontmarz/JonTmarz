@@ -12,7 +12,7 @@ import EditPost from '../pages/Blog/EditPost'
 import NewPost from '../pages/Blog/NewPost'
 import MarketingIA from '../pages/Courses/MarketingIA'
 import DLauncerGPT from '../pages/GPTs/DigitalLaunch'
-import MasterclassWeb from '../pages/Landings/WebinarWeb'
+import WebinarWeb from '../pages/Landings/WebinarWeb'
 import PolicyPrivacy from "../pages/PrivacyPolicy"
 import ErrorPage from '../pages/ErrorPage'
 
@@ -75,7 +75,7 @@ export const router: RouteObject[] = [
     },
     {
         path: "webinar-marketing-ia",
-        element: <MasterclassWeb />
+        element: <WebinarWeb />
     },
     {
         path: "policy-privacy",
