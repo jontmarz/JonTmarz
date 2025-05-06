@@ -227,5 +227,16 @@ export default {
         password: "Password is required"
       }
     },
+  },
+  chatBot: {
+    title: 'Virtual Assistant',
+    hi: '¡Hi! I\'m Mia, your assistant. Please, Fill out the form to get started.',
+    hi2: 'Hi I\'m Mia, your Virtual Assistant',
+    thankYou: 'Thank you {{userName}}! How can I help you?',
+    sorry: 'Sorry, an error occurred. Please, try again.',
+    name: 'Your name (optional)',
+    email: 'Please, enter your email address to start.',
+    start: 'Get started',
+    typeMessage: 'Write your message...',
   }
 };

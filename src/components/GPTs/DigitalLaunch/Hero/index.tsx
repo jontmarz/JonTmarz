@@ -11,6 +11,7 @@ const HeroSection: React.FC = () => {
     
     return (
         <Box
+            id="hero"
             sx={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 15, 0.8), rgba(0, 0, 15, 0.8)), url(${bgHero})`,
                 backgroundRepeat: 'no-repeat',

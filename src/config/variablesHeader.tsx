@@ -39,6 +39,11 @@ export const createMenus = (t: TFunction) => ({
     ],
     gtpLDigital: [
         { id: "Home", to: 'hero', label: t("navbar.home"), external: false },
+        { id: "QueEs", to: 'que-es', label: t("navbar.whatIs", { ns: 'DLGpt' }), external: false },
+        { id: "ParaQuien", to: 'para-quien', label: t("navbar.forWho", { ns: 'DLGpt' }), external: false },
+        { id: "ComoFunciona", to: 'como-funciona', label: t("navbar.howItWorks", { ns: 'DLGpt' }), external: false },
+        { id: "Demo", to: 'demo', label: t("navbar.demo", { ns: 'DLGpt' }), external: false },
+        { id: "FAQ", to: 'faq', label: t("navbar.faq", { ns: 'DLGpt' }), external: false },
     ],
 });
 

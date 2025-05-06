@@ -1,6 +1,14 @@
 import { title } from "process";
 
 export default {
+    navbar: {
+        home: 'Inicio',
+        whatIs: '¿Qué es?',
+        forWho: '¿Para quién es?',
+        howItWorks: '¿Cómo funciona?',
+        demo: 'Ver demostración',
+        faq: 'Preguntas frecuentes',
+    },
     hero: {
         title: 'Lanzador Digital',
         subtitle: 'El asistente que multiplica el impacto de tu marca en el entorno digital',
@@ -97,7 +105,8 @@ export default {
     demo: {
         title: "Mira Cómo funciona",
         subtitle: "Observa una demostración rápida del Lanzador Digital en acción",
-        ctaText: "Comenzar Ahora"
+        ctaText: "Comenzar Ahora",
+        expandText: "Expandir",
     },
     faq: {
         title: "Preguntas Frecuentes",

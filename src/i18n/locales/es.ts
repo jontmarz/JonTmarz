@@ -225,5 +225,16 @@ export default {
         password: "Password es requerido"
       }
     },
+  },
+  chatBot: {
+    title: 'Asistente Virtual',
+    hi: '¡Hola! Soy Mia, tu asistente. por favor, llena el formulario para comenzar.',
+    hi2: 'Soy Mia, tu Asistente Virtual',
+    thankYou: 'Gracias {{userName}}! ¿En qué puedo ayudarte?',
+    sorry: 'Lo siento, ocurrió un error. Por favor, intenta de nuevo.',
+    name: 'Tu nombre (opcional)',
+    email: 'Por favor, ingresa tu correo electrónico para empezar.',
+    start: 'Comenzar',
+    typeMessage: 'Escribe tu mensaje...',
   }
 };

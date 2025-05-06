@@ -1,8 +1,14 @@
-import { title } from "process";
 
 export default {
+    navbar: {
+        whatIs: 'What is?',
+        forWho: 'For Who?',
+        howItWorks: 'How it Work?',
+        demo: 'Watch Demo',
+        faq: 'Frequent Questions',
+    },
     hero: {
-        title: 'Lanzador Digital',
+        title: 'Digital Launcher',
         subtitle: 'El asistente que multiplica el impacto de tu marca en el entorno digital',
         btn1: 'Comenzar Ahora',
         btn2: 'Ver Demostración',
@@ -97,7 +103,8 @@ export default {
     demo: {
         title: "Mira Cómo funciona",
         subtitle: "Observa una demostración rápida del Lanzador Digital en acción",
-        ctaText: "Comenzar Ahora"
+        ctaText: "Comenzar Ahora",
+        expandText: "Expandir",
     },
     faq: {
         title: "Preguntas Frecuentes",

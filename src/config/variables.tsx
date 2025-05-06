@@ -82,6 +82,8 @@ import bgheroDLGPT from '/src/assets/GPTs/bg-hero-gpt-digital-launcher.webp'
 import faviconDLGPT from '/src/assets/GPTs/favicon-digital-launcher.webp'
 import bgBenefit from '/src/assets/GPTs/bg-right-benefits.webp'
 import bgHowItWorks from '/src/assets/GPTs/bg-human-face-tech-blue_org.webp'
+import videoUrl from '/src/assets/GPTs/Lanzador_digital.mp4'
+import imgThumbnail from '/src/assets/GPTs/thumbnail-GPPTLD-demo-video.webp'
 
 export const DLauncerGPT = {
     bgHero: bgheroDLGPT,
@@ -89,7 +91,8 @@ export const DLauncerGPT = {
     urlDLG: 'https://chatgpt.com/g/g-67d2d0115cfc8191a96dbbab684712db-lanzador-digital',
     bgBenefits: bgBenefit,
     bgHowItWorks: bgHowItWorks,
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID", 
-    videoThumbnail: "https://via.placeholder.com/800x450",
+    videoUrl: videoUrl,
+    // videoUrl: "https://www.youtube.com/embed/425IezptFzU?si=gAaljJp7AkD8-qXk",
+    videoThumbnail: imgThumbnail,
     contact: 'help@jontmarz.com'
 }
