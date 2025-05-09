@@ -5,7 +5,11 @@ import axios from 'axios'
 // Validate environment variables at startup
 const OPENAI_API_KEY = process.env.VITE_OPENAI_API_KEY
 const MAILERLITE_API_KEY = process.env.VITE_MAILERLITE_API_KEY
-const MAILERLITE_GROUP_ID = process.env.VITE_MAILERLITE_CHATBOT_GROUP || 'ChatBot';
+const MAILERLITE_GROUP_ID = process.env.VITE_MAILERLITE_CHATBOT_GROUP || 'ChatBot'
+const CONTACT_EMAIL = process.env.VITE_CONTACT_EMAIL || 'help@jontmarz.com'
+const WHATSAPP_NUMBER = process.env.VITE_WHATSAPP_NUMBER || '573194356458'
+const CALENDLY_URL = process.env.VITE_CALENDLY_URL || 'https://calendly.com/jontmarz/30min?back=1'
+
 
 // Log environment variable status (without exposing actual values)
 console.log('Environment variables check:', { 
@@ -18,7 +22,22 @@ console.log('Environment variables check:', {
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,
   timeout: 8000, // 8 seconds timeout (Netlify functions have 10s limit)
-});
+})
+
+// Interface to Menu
+interface MenuOptions{
+    id: string
+    text: string
+    icon?: string
+    action?: string[]
+    submenus?: MenuOptions[]
+}
+
+// Interface to ChatRequest
+interface BotResponse {
+    response: string
+    menu?: MenuOptions[]
+}
 
 interface ChatRequest {
     message: string
@@ -28,6 +47,82 @@ interface ChatRequest {
     contactEmail?: string
     email?: string
     name?: string
+    menuAction?: string
+}
+
+const mainMenu: MenuOptions[] = [
+    { id: 'services', text: '🛠️ Servicios ofrecidos', icon: 'home', action: ['SHOW_SERVICES'] },
+    { id: 'consulting', text: '🤖 Consultoría en IA', icon: 'home', action: ['SHOW_CONSULTING'] },
+    { id: 'courses', text: '📚 Cursos con IA', icon: 'home', action: ['SHOW_COURSES'] },
+    // { id: 'apps', text: 'Aplicaciones Activas', icon: 'home', action: ['SHOW_APPS'] },
+    { id: 'digital-launcher', text: '🚀 Lanzador Digital GPT', icon: 'home', action: ['SHOW_LAUNCHER'] },
+    { id: 'contact', text: '📞 Contacto y soporte', icon: 'home', action: ['SHOW_CONTACT'] },
+    { id: 'other', text: '❓ Otra pregunta', icon: 'home', action: ['ASK_QUESTION'] },
+]
+
+const servicesMenu: MenuOptions[] = [
+    { id: 'architecture', text: '🔧 Arquitectura de software', icon: 'home', action: ['SHOW_ARCHITECTURE'] },
+    { id: 'automation', text: '🤖 Automatización de procesos', icon: 'home', action: ['SHOW_AUTOMATION'] },
+    { id: 'consulting', text: '🤖 Consultoría en IA', icon: 'home', action: ['SHOW_CONSULTINGIA'] },
+    { id: 'development', text: '💻 Desarrollo de software', icon: 'home', action: ['SHOW_DEVELOPMENT'] },
+    { id: 'back', text: '↩️ Menú Principal', icon: 'home', action: ['BACK_MAIN'] },
+]
+
+const contactMenu: MenuOptions[] = [
+    { id: 'form', text: '📝 Formulario de contacto', icon: 'home', action: ['SHOW_FORM'] },
+    { id: 'email', text: '📧 Enviar Email', icon: 'home', action: ['SHOW_EMAIL'] },
+    { id: 'whatsapp', text: '📱 WhatsApp', icon: 'home', action: ['SHOW_WHATSAPP'] },
+    { id: 'call', text: '📞 Agendar Llamada', icon: 'home', action: ['SHOW_CALL'] },
+    { id: 'back', text: '↩️ Menú Principal', icon: 'home', action: ['BACK_MAIN'] },
+]
+
+/* const appsMenu: MenuOptions[] = [
+    { id: 'digital-launcher', text: '🚀 Lanzador Digital GPT', icon: 'home', action: ['SHOW_LAUNCHER'] }
+] */
+
+const processMenuAction = (action: string, miaCourse: string, DLauncher: string, whatsapp:string, calendly: string, formPath?: string, contactEmail?: string): BotResponse => {
+    switch (action) {
+        case 'SHOW_SERVICES':
+            return { response: '¡Descubre nuestra gama de servicios profesionales diseñados para impulsar tu éxito! 🚀 ¿En qué te puedo ayudar hoy?', menu: servicesMenu }
+        case 'SHOW_CONSULTING':
+            return { response: '¡Potencia tu negocio con IA! Ofrezco consultoría especializada para implementar soluciones inteligentes que transformarán tus procesos, aumentarán tu productividad y te darán una ventaja competitiva real en el mercado. ¿Listo para llevar tu empresa al siguiente nivel?', menu: [] }
+        case 'SHOW_COURSES':
+            return { response: `¡Descubre el poder de la IA! Te invito a mi curso transformador donde aprenderás a automatizar tu negocio digital de manera práctica y efectiva. En "Lanza tu negocio digital con IA", te guiaré paso a paso para revolucionar tu presencia online y multiplicar tus resultados. ¡Explora más detalles en ${miaCourse} y da el primer paso hacia el futuro del marketing digital!`, menu: [] }
+        case 'SHOW_LAUNCHER':
+            return { response: `El Lanzador Digital GPT es una herramienta que te ayuda a crear contenido y estrategias de marketing digital. Puedes aprender a usarlo en ${DLauncher}`, menu: [] }
+        case 'SHOW_CONTACT':
+            return { response: '¡Estoy aquí para ayudarte! 👋 ¿De qué manera prefieres que nos conectemos? Elige la opción que te resulte más cómoda:', menu: contactMenu }
+        case 'SHOW_ARCHITECTURE':
+            return { response: '¡Diseñemos el futuro de tu software! Creamos arquitecturas robustas, escalables y eficientes que se adaptan a tu negocio, asegurando que tu sistema crezca de manera sostenible y mantenible mientras optimizamos costos y rendimiento.', menu: [] }
+        case 'SHOW_AUTOMATION':
+            return { response: '¡Transforma y optimiza tu negocio! Te ayudo a automatizar procesos repetitivos y flujos de trabajo usando IA y tecnologías modernas, permitiéndote ahorrar tiempo, reducir errores y enfocarte en lo que realmente importa.', menu: [] }
+        case 'SHOW_CONSULTINGIA':
+            return { response: '¡Potencia tu negocio con IA! Ofrezco consultoría especializada para implementar soluciones inteligentes que transformarán tus procesos, aumentarán tu productividad y te darán una ventaja competitiva real en el mercado digital.', menu: [] }
+        case 'SHOW_DEVELOPMENT':
+            return { response: '¡Transformo tus ideas en soluciones digitales! Ofrecemos desarrollo de software personalizado (Backend, Frontend, Mobile) con las últimas tecnologías para crear experiencias excepcionales que impulsen tu negocio.', menu: [] }
+        case 'SHOW_FORM':
+            return { response: `Puedes enviar tu requerimiento, llenando el formulario de contacto en ${formPath}`, menu: [] }
+        case 'SHOW_EMAIL':
+            return { response: `¡Encantado de conectar contigo! 📧 Puedes escribirme directamente a ${contactEmail}. Estaré feliz de responder tus consultas y ayudarte con tu proyecto.`, menu: [] }
+        case 'SHOW_WHATSAPP':
+            return { response: `¡Hablemos en tiempo real! 📱 Contáctame directamente por WhatsApp en ${whatsapp}. Estoy listo para responder tus consultas y ayudarte a alcanzar tus objetivos. ¡Escríbeme ahora! 💬`, menu: [] }
+        case 'SHOW_CALL':
+            return { response: `¡Agendemos una conversación personalizada! 📅 Reserva tu espacio en mi calendario en ${calendly} y charlemos sobre cómo puedo ayudarte a alcanzar tus objetivos. ¡Estoy ansioso por conocer más sobre tu proyecto! 🤝`, menu: [] }
+        case 'BACK_MAIN':
+            return { response: 'Volviendo al menú principal:', menu: mainMenu }
+        case 'ASK_QUESTION':
+            return { response: '¡Adelante! Estoy aquí para responder cualquier pregunta que tengas. Cuéntame, ¿en qué puedo ayudarte hoy? 🤝', menu: [] }
+        default:
+            return { response: 'No he podido procesar esa opción. ¿En qué puedo ayudarte?', menu: [] }
+    }
+}
+
+const detectMenuRequest = (message: string): boolean => {
+    const menuKeywords = ['menu', 'opciones', 'ayuda', 'help', 'servicios', 'contacto', 'cursos', 'más información', 'info', 'que puedes hacer', 'qué puedes hacer']
+    
+    return menuKeywords.some(keyword => 
+        message.toLowerCase().includes(keyword)
+    )
 }
 
 const saveUserToMailerLite = async (userData: { email: string; name?: string }) => {
@@ -38,24 +133,27 @@ const saveUserToMailerLite = async (userData: { email: string; name?: string }) 
             console.error('MAILERLITE_API_KEY no está configurado');
             return null;
         }
-        
-        const response = await axios.post(
-            'https://api.mailerlite.com/api/v2/subscribers',
-            {
-                email: userData.email,
-                name: userData.name || '',
-                groups: [MAILERLITE_GROUP_ID]
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-MailerLite-ApiKey': MAILERLITE_API_KEY
+
+        if(userData.email !== 'test@test.com') {
+            const response = await axios.post(
+                'https://api.mailerlite.com/api/v2/subscribers',
+                {
+                    email: userData.email,
+                    name: userData.name || '',
+                    groups: [MAILERLITE_GROUP_ID]
                 },
-                timeout: 5000 // 5 seconds timeout
-            }
-        )
-        console.log('Respuesta de MailerLite:', response.data);
-        return response.data;
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-MailerLite-ApiKey': MAILERLITE_API_KEY
+                    },
+                    timeout: 5000 // 5 seconds timeout
+                }
+            )
+            console.log('Respuesta de MailerLite:', response.data)
+            return response.data
+        }
+        
     } catch (error) {
         if (axios.isAxiosError(error)) {
             console.error('Error de Axios al guardar usuario en MailerLite:', {
@@ -102,9 +200,19 @@ const handler: Handler = async (event, context) => {
             }
         }
 
-        const { message, pageUrl, pageTitle, formPath, contactEmail, email, name }: ChatRequest = JSON.parse(event.body);
+        const { message, pageUrl, pageTitle, formPath, contactEmail, email, name, menuAction }: ChatRequest = JSON.parse(event.body);
         
-        console.log('Solicitud recibida:', { message, pageUrl, email });
+        console.log('Solicitud recibida:', { message, pageUrl, email })
+
+        // Si tenemos una acción de menú, procesarla directamente
+        if (menuAction) {
+            const menuResponse = processMenuAction(menuAction, '/mia-course', '/digital-launcher-gpt', WHATSAPP_NUMBER, CALENDLY_URL, formPath, CONTACT_EMAIL)
+            return {
+                statusCode: 200,
+                headers,
+                body: JSON.stringify(menuResponse),
+            }
+        }
 
         if (!message) {
             return {
@@ -119,6 +227,18 @@ const handler: Handler = async (event, context) => {
                 await saveUserToMailerLite({ email, name });
             } catch (saveError) {
                 console.error('Error al guardar en MailerLite, continuando con la respuesta del chatbot:', saveError);
+            }
+        }
+
+        // Verificar si el mensaje parece solicitar un menú
+        if (detectMenuRequest(message)) {
+            return {
+                statusCode: 200,
+                headers,
+                body: JSON.stringify({
+                    response: "¿En qué puedo ayudarte? Selecciona una opción:",
+                    menu: mainMenu
+                }),
             }
         }
 
