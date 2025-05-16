@@ -5,6 +5,7 @@ interface FormData {
   from_name: string
   email_address: string
   phone_number: string
+  inquiry_type: string
   message: string
 }
 
@@ -14,6 +15,8 @@ interface SubscriberData {
     name: string
     last_name: string
     phone: string
+    inquiry: string
+    message: string
   };
   groups: string[]
 }
@@ -63,6 +66,8 @@ export const handler: Handler = async (
         name: firstName,
         last_name: lastName,
         phone: data.phone_number,
+        inquiry: data.inquiry_type,
+        message: data.message,
       },
       groups: process.env.VITE_MAILERLITE_GROUPS
         ? process.env.VITE_MAILERLITE_GROUPS.split(',').map((g) => g.trim())

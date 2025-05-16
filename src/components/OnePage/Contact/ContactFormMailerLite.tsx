@@ -10,6 +10,7 @@ interface FormData {
   email_address: string
   phone_number: string
   message: string
+  inquiry_type: string; // New field for dropdown
 }
 
 const ContactForm: React.FC = () => {
@@ -136,6 +137,25 @@ const ContactForm: React.FC = () => {
       />
       {errors.phone_number && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.phone')}</Typography>}
 
+       
+      {/* Inquiry Type Dropdown */}
+      <TextField
+        select
+        label={t('contact.form.inquiryType')}
+        {...register('inquiry_type', { required: true })}
+        SelectProps={{
+          native: true,
+        }}
+        fullWidth
+      >
+        <option value="">{t('contact.form.inquiryType')}</option>
+        <option value="app">{t('contact.form.inquiryOptions.app')}</option>
+        <option value="website">{t('contact.form.inquiryOptions.website')}</option>
+        <option value="automation">{t('contact.form.inquiryOptions.automation')}</option>
+        <option value="consulting">{t('contact.form.inquiryOptions.consulting')}</option>
+      </TextField>
+      {errors.inquiry_type && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.inquiryType')}</Typography>}
+
       {/* Message field */}
       <TextField
         label={t('contact.form.message')}
@@ -145,7 +165,7 @@ const ContactForm: React.FC = () => {
         fullWidth
       />
       {errors.message && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.message')}</Typography>}
- 
+
       {/* Privacy Policy */}
       <Typography component="p" gutterBottom className='text-white font-bold' sx={{ fontSize: 12 }}>
         Al enviar este formulario, aceptas nuestra <a href="https://jontmarz.com/policy-privacy/" target="_blank" rel="noopener noreferrer" className='text-[#CCA70A] underline'>Política de Privacidad</a>.

@@ -183,6 +183,14 @@ export default {
       name: "Name",
       email: "Email",
       phone: "Phone",
+      inquiryType: "Can I help you with something?",
+      inquiryOptions: {
+        app: "Do you have any idea and do you want to develop?",
+        website: "Do you need a website or an ecommerce?",
+        automation: "Do you want to automize any task or process?",
+        IA: "Do you need help about AI?",
+        consulting: "Looking for a technology consultancy?",
+      },
       message: "Message",
       button: "Submit",
       ht: {
@@ -191,7 +199,8 @@ export default {
         emailvalid: "El correo is not valid",
         phone: "El teléfono is required",
         message: "El mensaje is required",
-        recaptcha: "Please confirm that you are not a robot"
+        recaptcha: "Please confirm that you are not a robot",
+        inquiryType: "Can I help you with something?", 
       },
       success: "Message sent successfully!",
       error: "An error occurred while sending the message. Try again."
@@ -225,7 +234,7 @@ export default {
         text: "Please check your data and try again",
         email: "Email is required",
         password: "Password is required"
-      }
+      },
     },
   },
   chatBot: {
