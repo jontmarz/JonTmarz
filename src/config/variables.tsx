@@ -1,7 +1,7 @@
 // Home
 export const dataContact = {
-    email: "help@jontmarz.com",
-    wa: "+57 319 435 6458",
+    email: import.meta.env.VITE_CONTACT_EMAIL,
+    wa: import.meta.env.VITE_WHATSAPP_NUMBER,
     msjwa: "&text=Hola%20%F0%9F%91%8B.%20Tengo%20preguntas%20sobre%20la%20Politica%20de%20Privacidad.%20",
     address: "Cra 124 # 131 - 19 Bogotá - Colombia",
     formURL: "https://jontmarz.com/#contact",
@@ -11,13 +11,13 @@ import { Instagram, LinkedIn, GitHub, YouTube, X, WhatsApp, EditCalendar, Facebo
 
 export const socialMedia = [
     { name: 'LinkedIn', icon: LinkedIn, link: 'https://www.linkedin.com/in/john-tmarz/' },
-    { name: 'Whatsapp', icon: WhatsApp, link: 'https://api.whatsapp.com/send?phone=573194356458&text=Hola%20%F0%9F%91%8B.%20Quiero%20iniciar%20un%20nuevo%20proyecto%20de%20desarrollo.%20' },
+    { name: 'Whatsapp', icon: WhatsApp, link: import.meta.env.VITE_WHATSAPP_NUMBER },
     { name: 'GitHub', icon: GitHub, link: 'https://github.com/jontmarz' },
     { name: 'Instagram', icon: Instagram, link: 'https://www.instagram.com/jon_tmarz/' },
     { name: 'Facebook', icon: Facebook, link: 'https://www.facebook.com/jon.martz.co/' },
     // { name: 'YouTube', icon: YouTube, link: 'https://www.youtube.com/user/hardjonedi' },
     { name: 'X', icon: X, link: 'https://twitter.com/JonTMarz' },
-    { name: 'Calendly', icon: EditCalendar, link: 'https://calendly.com/jontmarz' },
+    { name: 'Calendly', icon: EditCalendar, link: import.meta.env.VITE_CALENDLY_URL },
 ]
 
 import scrumBadge from '/src/assets/scrum-foundation-certification-candidate.webp'
@@ -84,6 +84,7 @@ import bgBenefit from '/src/assets/GPTs/bg-right-benefits.webp'
 import bgHowItWorks from '/src/assets/GPTs/bg-human-face-tech-blue_org.webp'
 import videoUrl from '/src/assets/GPTs/Lanzador_digital.mp4'
 import imgThumbnail from '/src/assets/GPTs/thumbnail-GPPTLD-demo-video.webp'
+import { env } from 'process'
 
 export const DLauncerGPT = {
     bgHero: bgheroDLGPT,

@@ -13,6 +13,11 @@ interface FormData {
   inquiry_type: string; // New field for dropdown
 }
 
+interface InquiryOption {
+  id: string
+  text: string
+}
+
 const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null)
   const [statusMessage, setStatusMessage] = useState<string | null>(null)
@@ -21,6 +26,13 @@ const ContactForm: React.FC = () => {
   const recaptchaRef = useRef<ReCAPTCHA>(null)
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
   const environment = import.meta.env.VITE_ENVIRONMENT
+  const inquiryOptions: InquiryOption[] = [
+    { id: 'development', text: t('contact.form.inquiryOptions.app') },
+    { id: 'website', text: t('contact.form.inquiryOptions.website') },
+    { id: 'automation', text: t('contact.form.inquiryOptions.automation') },
+    { id: 'ai', text: t('contact.form.inquiryOptions.ai') },
+    { id: 'consulting', text: t('contact.form.inquiryOptions.consulting') }
+  ]
 
   // reCAPTCHA callback
   const onReCAPTCHAChange = (token: string | null) => {
@@ -142,17 +154,21 @@ const ContactForm: React.FC = () => {
       <TextField
         select
         label={t('contact.form.inquiryType')}
-        {...register('inquiry_type', { required: true })}
+        {...register('inquiry_type', {
+          required: true,
+          validate: (value) => value !== "", // Ensure the first option is not selected
+        })}
         SelectProps={{
           native: true,
         }}
         fullWidth
       >
-        <option value="">{t('contact.form.inquiryType')}</option>
-        <option value="app">{t('contact.form.inquiryOptions.app')}</option>
-        <option value="website">{t('contact.form.inquiryOptions.website')}</option>
-        <option value="automation">{t('contact.form.inquiryOptions.automation')}</option>
-        <option value="consulting">{t('contact.form.inquiryOptions.consulting')}</option>
+        <option value=""></option>
+        {inquiryOptions.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.text}
+          </option>
+        ))}
       </TextField>
       {errors.inquiry_type && <Typography component="span" sx={{ color: "red", fontSize: 10 }}>{t('contact.form.ht.inquiryType')}</Typography>}
 

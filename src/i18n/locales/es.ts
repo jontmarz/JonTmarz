@@ -184,11 +184,11 @@ export default {
       phone: "Teléfono",
       inquiryType: "¿En que puedo ayudarte?",
       inquiryOptions: {
-        app: "¿Tienes una idea y yuieres desarrollar una app?",
+        app: "¿Tienes una idea y quieres desarrollar una app?",
         website: "¿Necesitas un sitio web o una tienda en línea?",
         automation: "¿Buscas automatizar procesos o tareas?",
-        IA: "¿Necesitas consultoría en IA?",
-        consulting: "¿Buscas consultoría tecnológica?",
+        ai: "¿Necesitas consultoría en Inteligencia Artificial?",
+        consulting: "¿Buscas otra consultoría tecnológica?",
       },
       message: "Mensaje",
       button: "Enviar",
@@ -199,7 +199,7 @@ export default {
         phone: "El teléfono es requerido",
         message: "El mensaje es requerido",
         recaptcha: "Por favor, verifica que no eres un robot",
-        inquiryType: "¿En que puedo ayudarte?",
+        inquiryType: "Elije una opción de la lista",
       },
       success: "¡Mensaje enviado exitosamente!",
       error: "Ocurrió un error al enviar el mensaje. Intenta nuevamente."

@@ -21,6 +21,13 @@ interface SubscriberData {
   groups: string[]
 }
 
+const simulateMailerLite = async (subscriberData: SubscriberData): Promise<void> => {
+  console.log('Simulating MailerLite API call with data:', subscriberData);
+  // Simulate a delay to mimic an API call
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  console.log('Simulation complete: Subscriber added/updated successfully.');
+};
+
 export const handler: Handler = async (
   event: HandlerEvent,
   _context: HandlerContext
@@ -76,13 +83,16 @@ export const handler: Handler = async (
 
     // Obtener la API key de MailerLite desde las variables de entorno
     const apiKey = process.env.VITE_MAILERLITE_API_KEY;
-    if (!apiKey) {
-      throw new Error('Missing MailerLite API key');
-    }
-    const mailerLite = new MailerLite({ api_key: apiKey });
 
-    // Agregar o actualizar el suscriptor
-    await mailerLite.subscribers.createOrUpdate(subscriberData);
+    if (process.env.VITE_ENVIRONMENT === 'development' || !apiKey) {
+      console.warn('Missing MailerLite API key. Running in simulation mode.');
+      await simulateMailerLite(subscriberData);
+    } else {
+      const mailerLite = new MailerLite({ api_key: apiKey });
+
+      // Agregar o actualizar el suscriptor
+      await mailerLite.subscribers.createOrUpdate(subscriberData);
+    }
 
     return {
       statusCode: 200,
