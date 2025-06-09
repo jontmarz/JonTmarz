@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
+import { Tv2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import PlayButton from './PlayButton'
 import MuteButton from './MuteButton'
@@ -130,9 +131,10 @@ const MiniaturePlayer: React.FC<MiniaturePlayerProps> = ({
               }}
               onClick={handleExpand}
             >
-              <Typography variant="caption" sx={{ color: 'white', fontSize: '0.7rem' }}>
+              <Tv2 size={16} color="white" />
+              {/* <Typography variant="caption" sx={{ color: 'white', fontSize: '0.7rem' }}>
                 {t('demo.expandText') || 'Expandir'}
-              </Typography>
+              </Typography> */}
             </Box>
           </Box>
 

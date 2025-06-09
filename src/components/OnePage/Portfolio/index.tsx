@@ -10,7 +10,7 @@ import { Project } from '../../../types'
 
 const Portfolio: React.FC = () => {
   const { t } = useTranslation('OnePage')
-  const [activeCategory, setActiveCategory] = useState('VueJS')
+  const [activeCategory, setActiveCategory] = useState('ReactJS')
 
   const projectImages = import.meta.glob('../../../assets/projects/*.{webp,png,jpg,jpeg,svg}', { eager: true })
   const images: Record<string, string> = {}
@@ -26,7 +26,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.arrigui.title'),
       description: t('portfolio.websites.arrigui.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Elementor'],
       image: images['arrigui.webp'],
       url: 'https://arrigui.com/'
     },
@@ -36,7 +36,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.ceniflores.title'),
       description: t('portfolio.websites.ceniflores.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Elementor'],
       image: images['ceniflores.webp'],
       url: 'https://ceniflores.org/'
     },
@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.lecafe.title'),
       description: t('portfolio.websites.lecafe.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['lecafe.webp'],
       url: 'https://lecaferd.com.do/'
     },
@@ -66,7 +66,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.mandolina.title'),
       description: t('portfolio.websites.mandolina.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Bootstrap'],
       image: images['Mandolina.webp'],
       url: 'https://mandolina.com/'
     },
@@ -76,7 +76,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.vinali.title'),
       category: ['WordPress'],
       description: t('portfolio.websites.vinali.description'),
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Vinali-Group.webp'],
       url: 'https://vinaligroup.com/'
     },
@@ -86,7 +86,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.tco.title'),
       description: t('portfolio.websites.tco.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Tree-Care-Office.webp'],
       url: 'https://treecareoffice.com/'
     },
@@ -116,7 +116,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.holbie.title'),
       description: t('portfolio.websites.holbie.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Holbie.webp'],
       url: 'https://holisticbillingservices.com/'
     },
@@ -126,7 +126,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.ncg.title'),
       description: t('portfolio.websites.ncg.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['NCG-Medical.webp'],
       url: 'https://www.ncgmedical.com/'
     },
@@ -136,7 +136,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.taxpert.title'),
       description: t('portfolio.websites.taxpert.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Taxpert-Strategies.webp'],
       url: 'https://samuraiseb.org/'
     },
@@ -146,7 +146,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.acroskating.title'),
       description: t('portfolio.websites.taxpert.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Samurai-Seb.webp'],
       url: 'https://taxpertnow.com/'
     },
@@ -156,7 +156,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.netvin.title'),
       description: t('portfolio.websites.netvin.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Netvin.webp'],
       url: 'https://netvin.co/'
     },
@@ -166,7 +166,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.rcm.title'),
       description: t('portfolio.websites.rcm.description'),
       category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Vinali-RCM.webp'],
       url: 'https://vinalircm.com/'
     },
@@ -176,7 +176,7 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.apps.researchpro.title'),
       description: t('portfolio.apps.researchpro.description'),
       category: ['NodeJS', 'ReactJS'],
-      technologies: ['NodeJS', 'MongoDB', 'React'],
+      technologies: ['NodeJS', 'MongoDB', 'ReactJS'],
       image: images['researchpro.webp'],
       url: ''
     },
@@ -186,9 +186,29 @@ const Portfolio: React.FC = () => {
       title: t('portfolio.websites.jontmarz.title'),
       description: t('portfolio.websites.jontmarz.description'),
       category: ['NodeJS', 'ReactJS'],
-      technologies: ['NodeJS', 'MongoDB', 'React'],
+      technologies: ['NodeJS', 'MongoDB', 'ReactJS'],
       image: images['Jon-Tmarz.webp'],
-      url: 'https://jontmarz.netlify.app/'
+      url: 'https://jontmarz.com/'
+    },
+    {
+      id: 18,
+      year: 2025,
+      title: t('portfolio.websites.iacero.title'),
+      description: t('portfolio.websites.iacero.description'),
+      category: ['WordPress'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'OpenAI', 'AI Automation', 'Elementor'],
+      image: images['IA-Desde-Cero.webp'],
+      url: 'https://iadesdecero.com/'
+    },
+    {
+      id: 19,
+      year: 2025,
+      title: t('portfolio.websites.luckyhive.title'),
+      description: t('portfolio.websites.luckyhive.description'),
+      category: ['Firebase', 'ReactJS'],
+      technologies: ['Firebase', 'Firestore', 'ReactJS'],
+      image: images['LuckyHive.webp'],
+      url: 'https://luckyhive.jontmarz.com/'
     },
   ];
 

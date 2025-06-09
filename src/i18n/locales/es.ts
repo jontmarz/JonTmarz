@@ -143,17 +143,25 @@ export default {
         title: "Vinali Calculator",
         description: "Desarrollo de una aplicación web para calcular los ahorros de gastos de personal."
       },
+      jontmarz: {
+        title: "Jon Tmarz",
+        description: "Desarrollo de my sitio web personal Actualizado con sección de blog."
+      },
+      iacero: {
+        title: "IA desde Cero",
+        description: "Website development and implementation of automation tools for marketing and automation with AI."
+      },
+      luckyhive: {
+        title: "La colmena de la suerte",
+        description: "Arquitectura, desarrollo e implementación de juego de azar con premios instantáneos, utilizando tecnologías web modernas y prácticas de seguridad avanzadas."
+      },
     },
     apps: {
       researchpro: {
         title: "ResearchPro",
-        description: "Desarrollo de aplicación de gestión de proyectos de investigación, diseñada para optimizar el flujo de trabajo y la colaboración académica."
+        description: "Arquitectura y desarrollo de aplicación de gestión de proyectos de investigación, diseñada para optimizar el flujo de trabajo y la colaboración académica."
       }
     },
-    jontmarz: {
-      title: "Jon Tmarz",
-      description: "Desarrollo de sitio web personal Actualizado con sección de blog."
-    }
   },
   skills:{
     title: 'Habilidades',

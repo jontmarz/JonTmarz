@@ -1,11 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-// import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { router } from "./config/router"
-import { createMenus, menus } from './config/variablesHeader';
-import { useTranslation } from 'react-i18next';
+import { createMenus, menus } from './config/variablesHeader'
+import { useTranslation } from 'react-i18next'
+import TagManager from 'react-gtm-module'
 
 const theme = createTheme({
   palette: {
@@ -37,10 +37,17 @@ const theme = createTheme({
 });
 
 function App() {
-  const { t } = useTranslation('OnePage');
+  const { t } = useTranslation('OnePage')
   
   // Initialize menus with translations
-  Object.assign(menus, createMenus(t));
+  Object.assign(menus, createMenus(t))
+
+  // Initialize Google Tag Manager
+  useEffect(() => {
+    TagManager.initialize({
+      gtmId: import.meta.env.VITE_TAG_MANAGER_ID
+    });
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

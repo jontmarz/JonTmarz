@@ -89,7 +89,7 @@ export default {
       },
       ceniflores: {
         title: "Ceniflores",
-        description: "Development of a website and document management software."
+        description: "Development to website and document management software."
       },
       fresar: {
         title: "Fresar Ingenieros",
@@ -105,19 +105,19 @@ export default {
       },
       vinali: {
         title: "Vinali Group",
-        description: "Development of a corporate website with intranet integration and payroll calculator for different states in the United States."
+        description: "Development to corporate website with intranet integration and payroll calculator for different states in the United States."
       },
       tco: {
         title: "Treecare Office",
-        description: "Development of a website focused on business services and payroll calculator for different states in the United States."
+        description: "Development to website focused on business services and payroll calculator for different states in the United States."
       },
       holbie: {
         title: "Holbie",
-        description: "Development of a functional website for health and consulting services. Custom plugin to Billing Codes identifications."
+        description: "Development to functional website for health and consulting services. Custom plugin to Billing Codes identifications."
       },
       ncg: {
         title: "NCG Medical",
-        description: "Development of a functional website for health and consulting services. Development of a plugin for migrating a blog from HubSpot to WordPress."
+        description: "Development to functional website for health and consulting services. Development of a plugin for migrating a blog from HubSpot to WordPress."
       },
       acroskating: {
         title: "Acroskating",
@@ -145,14 +145,22 @@ export default {
       },
       jontmarz: {
         title: "Jon Tmarz",
-        description: "Development of a personal website with a blog section."
-      }
+        description: "Development of my personal website with a blog section."
+      },
+      iacero: {
+        title: "IA desde Cero",
+        description: "Website development and implementation of automation tools for marketing and automation with AI."
+      },
+      luckyhive: {
+        title: "Lucky Hive",
+        description: "Architecture, Development, and Implementation of a gambling game with instant prizes, using modern web technologies and advanced security practices."
+      },
     },
     apps: {
       researchpro: {
         id: 5,
         title: "ResearchPro",
-        description: "Development of a research project management application, designed to optimize workflow and academic collaboration."
+        description: "Architecture and development of a research project management application, designed to optimize workflow and academic collaboration."
       }
     }
   },

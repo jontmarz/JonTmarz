@@ -7,7 +7,7 @@ import './index.css'
 import './i18n'
 
 const tagManagerArgs = {
-  gtmId: 'GTM-W4JNLC33',
+  gtmId: import.meta.env.VITE_TAG_MANAGER_ID,
 }
 
 TagManager.initialize(tagManagerArgs)
