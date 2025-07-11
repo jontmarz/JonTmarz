@@ -78,7 +78,7 @@ export const router: RouteObject[] = [
         element: <WebinarWeb />
     },
     {
-        path: "policy-privacy",
+        path: "privacy-policy",
         element: <PolicyPrivacy />
     },
     {

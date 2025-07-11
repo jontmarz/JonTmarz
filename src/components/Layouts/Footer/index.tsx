@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               
               {/* Copyright */}
               <Typography variant="body2" align="center">
-                © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')} | <Link to="/policy-privacy">{t('footer.privacy')}</Link>.
+                © {new Date().getFullYear()} Jon Tmarz. {t('footer.copyright')} | <Link to="/privacy-policy">{t('footer.privacy')}</Link>.
               </Typography>
             </Box>
             </Grid>
