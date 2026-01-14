@@ -128,10 +128,11 @@ const Header: React.FC<HeaderProps> = ({ menuType = 'default' }) => {
                 {/* Logo */}
                 <Typography variant="h6" sx={{ cursor: 'pointer' }}>
                     <RouterLink to="/">
-                        <img 
+                        <Box 
+                            component="img"
                             src={Logo} 
                             alt="Logo" 
-                            style={{ height: "80px", cursor: 'pointer' }} 
+                            sx={{ height: "100%", width: {xs: "120px", md: "130px"}, cursor: 'pointer' }} 
                         />
                     </RouterLink>
                 </Typography>

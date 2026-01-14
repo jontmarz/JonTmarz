@@ -10,9 +10,17 @@ import OPes from './locales/es'
 import CMen from './Courses/webMarketing/en'
 import CMes from './Courses/webMarketing/es'
 
-// GPT
-import DLen from './GPTs/DigitalLauncher/en'
-import DLes from './GPTs/DigitalLauncher/es'
+// Apps
+import DLen from './Apps/DigitalLauncher/en'
+import DLes from './Apps/DigitalLauncher/es'
+import KAen from './Apps/KodaApp/en'
+import KAes from './Apps/KodaApp/es'
+import TCen from './Apps/TributosCo/en'
+import TCes from './Apps/TributosCo/es'
+
+// Pages
+import AMen from './pages/AboutMe/en'
+import AMes from './pages/AboutMe/es'
 
 i18n
   .use(LanguageDetector)
@@ -22,17 +30,23 @@ i18n
       en: {
         OnePage: OPen,
         CurseWeb: CMen,
-        DLGpt: DLen
+        DLGpt: DLen,
+        KodaApp: KAen,
+        TributosCo: TCen,
+        AboutMe: AMen
       },
       es: {
         OnePage: OPes,
         CurseWeb: CMes,
-        DLGpt: DLes
+        DLGpt: DLes,
+        KodaApp: KAes,
+        TributosCo: TCes,
+        AboutMe: AMes
       }
     },
     fallbackLng: 'en',
     debug: false,
-    ns: ['OnePage', 'CurseWeb', 'DLGpt'], // agrega todos tus namespaces aquí
+    ns: ['OnePage', 'CurseWeb', 'DLGpt', 'KodaApp', 'TributosCo', 'AboutMe'], // agrega todos tus namespaces aquí
     defaultNS: 'OnePage',
     detection: {
       order: ['navigator', 'htmlTag', 'localStorage', 'cookie'],

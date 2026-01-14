@@ -5,6 +5,7 @@ export default {
     about: "About",
     services: "Services",
     portfolio: "Portfolio",
+    apps: "Apps",
     skills: "Skills",
     contact: "Contact",
     blog: "Blog",
@@ -24,7 +25,7 @@ export default {
       },
       {
         title: "AI Innovation & Automation",
-        description: "<b>Expert in Python, R language, and Artificial Intelligence development</b>. I specialize in creating innovative solutions using GPT and other AI technologies. I develop intelligent bots and automation systems that transform business processes, improving efficiency and productivity."
+        description: "<b>I know Python, R language, and Artificial Intelligence development</b>. I'm an expert in creating innovative solutions using GPT and other AI technologies. I develop intelligent bots and automation systems that transform business processes, improving efficiency and productivity."
       },
       {
         title: "Technology Educator",
@@ -164,6 +165,26 @@ export default {
       }
     }
   },
+  appsSection: {
+    title: "Developed Apps",
+    subtitle: "Innovative technological solutions combining artificial intelligence and automation",
+    kodaApp: {
+      title: "Koda App",
+      description: "Automation system for generating smart quotes. Combines AI, conversational flows and automatic processing to create professional technical proposals in minutes.",
+      tags: ["AI", "Automation", "Chatbot"]
+    },
+    digitalLauncher: {
+      title: "Digital Launcher",
+      description: "AI-powered marketing assistant designed for entrepreneurs and small businesses. Create digital strategies, generate optimized content and plan successful launches.",
+      tags: ["AI Marketing", "Content", "Strategy"]
+    },
+    tributosCo: {
+      title: "Tributos Co",
+      description: "npm package to automate labor and tax calculations in Colombia. Includes salary surcharges, social benefits, social security and validations updated to 2026.",
+      tags: ["npm", "Colombia", "Payroll"]
+    },
+    viewApp: "View App"
+  },
   skills: {
     title: 'Skills',
     subtitle: 'Soft Skills',
@@ -175,6 +196,7 @@ export default {
   buttons: {
     hero: "Conect with me",
     about: "Schedule an Appointment",
+    more: "Learn more",
     service: "Let´s start your project.",
     portfolio: "Get in touch me",
     downloadCV: "Download CV",

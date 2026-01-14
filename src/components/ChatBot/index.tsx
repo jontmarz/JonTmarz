@@ -84,6 +84,19 @@ const ChatBot: React.FC = () => {
     setMessages([{ text: t('chatBot.hi'), isUser: false, timestamp: new Date() }]);
   }, [t]);
 
+  useEffect(() => {
+    // Listen for custom event to open chatbot
+    const handleOpenChatBot = () => {
+      setIsOpen(true);
+    };
+
+    window.addEventListener('openChatBot', handleOpenChatBot);
+    
+    return () => {
+      window.removeEventListener('openChatBot', handleOpenChatBot);
+    };
+  }, []);
+
   const fetchInitialMenu = async () => {
     if (isEmailSubmitted) {
       setIsLoading(true);

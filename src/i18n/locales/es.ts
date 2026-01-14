@@ -5,6 +5,7 @@ export default {
     about: "Sobre Mí",
     services: "Servicios",
     portfolio: "Portafolio",
+    apps: "Apps",
     skills: "Habilidades",
     contact: "Contacto",
     blog: "Blog",
@@ -24,7 +25,7 @@ export default {
       },
       {
         title: "Innovación en IA y Automatización",
-        description: "<b>Experto en Python y desarrollo en Inteligencia Artificial</b>, además de conocimientos en lenguaje R. Me especializo en crear soluciones innovadoras utilizando GPT y otras tecnologías de IA. Desarrollo bots inteligentes y sistemas de automatización que transforman procesos empresariales, mejorando la eficiencia y productividad."
+        description: "<b>Conozco Python y desarrollo en Inteligencia Artificial</b>, además de conocimientos en lenguaje R. Soy experto en crear soluciones innovadoras utilizando GPT y otras tecnologías de IA. Desarrollo bots inteligentes y sistemas de automatización que transforman procesos empresariales, mejorando la eficiencia y productividad."
       },
       {
         title: "Educador Tecnológico",
@@ -163,6 +164,26 @@ export default {
       }
     },
   },
+  appsSection: {
+    title: "Apps Desarrolladas",
+    subtitle: "Soluciones tecnológicas innovadoras que combinan inteligencia artificial y automatización",
+    kodaApp: {
+      title: "Koda App",
+      description: "Sistema de automatización para generar cotizaciones inteligentes. Combina IA, flujos conversacionales y procesamiento automático para crear propuestas técnicas profesionales en minutos.",
+      tags: ["IA", "Automatización", "Chatbot"]
+    },
+    digitalLauncher: {
+      title: "Lanzador Digital",
+      description: "Asistente de marketing impulsado por IA diseñado para emprendedores y pequeñas empresas. Crea estrategias digitales, genera contenido optimizado y planifica lanzamientos exitosos.",
+      tags: ["Marketing IA", "Contenido", "Estrategia"]
+    },
+    tributosCo: {
+      title: "Tributos Co",
+      description: "Paquete npm para automatizar cálculos laborales y fiscales en Colombia. Incluye recargos salariales, prestaciones sociales, seguridad social y validaciones actualizadas a 2026.",
+      tags: ["npm", "Colombia", "Nómina"]
+    },
+    viewApp: "Ver App"
+  },
   skills:{
     title: 'Habilidades',
     subtitle: 'Habilidades Blandas',
@@ -174,6 +195,7 @@ export default {
   buttons: {
     hero: "Conecta conmigo",
     about: "Agenda una consulta",
+    more: "Conocer más",
     service: "Comencemos tu proyecto",
     portfolio: "Contáctame",
     downloadCV: "Descargar CV",

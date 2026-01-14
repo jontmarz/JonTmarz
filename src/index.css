@@ -72,7 +72,7 @@ header.MuiPaper-root {
 
 #hero {
   &.bg-hero {
-    background-image: url('/src/assets/bg-tool-developer.webp');
+    background-image: url('/src/assets/bg-jon-robot-ia-software-automation.webp');
     background-size: cover;
     background-position: center;
   }

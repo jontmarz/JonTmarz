@@ -78,12 +78,12 @@ export const webinar = {
 
 
 // Digital Launcher GPT
-import bgheroDLGPT from '/src/assets/GPTs/bg-hero-gpt-digital-launcher.webp'
-import faviconDLGPT from '/src/assets/GPTs/favicon-digital-launcher.webp'
-import bgBenefit from '/src/assets/GPTs/bg-right-benefits.webp'
-import bgHowItWorks from '/src/assets/GPTs/bg-human-face-tech-blue_org.webp'
-import videoUrl from '/src/assets/GPTs/Lanzador_digital.mp4'
-import imgThumbnail from '/src/assets/GPTs/thumbnail-GPPTLD-demo-video.webp'
+import bgheroDLGPT from '/src/assets/Apps/bg-hero-gpt-digital-launcher.webp'
+import faviconDLGPT from '/src/assets/Apps/favicon-digital-launcher.webp'
+import bgBenefit from '/src/assets/Apps/bg-right-benefits.webp'
+import bgHowItWorks from '/src/assets/Apps/bg-human-face-tech-blue_org.webp'
+import videoUrl from '/src/assets/Apps/Lanzador_digital.mp4'
+import imgThumbnail from '/src/assets/Apps/thumbnail-GPPTLD-demo-video.webp'
 import { env } from 'process'
 
 export const DLauncerGPT = {

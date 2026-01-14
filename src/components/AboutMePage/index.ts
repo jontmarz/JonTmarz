@@ -1,0 +1,7 @@
+export { default as Hero } from './Hero'
+export { default as Story } from './Story'
+export { default as WhatDrivesMe } from './WhatDrivesMe'
+export { default as Journey } from './Journey'
+export { default as Projects } from './Projects'
+export { default as Personal } from './Personal'
+export { default as CTA } from './CTA'

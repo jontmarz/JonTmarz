@@ -3,21 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Container, Typography, Button } from '@mui/material'
 import { Link } from "react-scroll"
-import { ThumbsUp } from 'lucide-react'
+import { Link as RouterLink } from 'react-router-dom'
+import { ThumbsUp, ArrowRight } from 'lucide-react'
 import AboutSection from './AboutSection'
 
 const About: React.FC = () => {
   const { t } = useTranslation('OnePage')
-
-  // Función para renderizar HTML desde un texto con posibles saltos de línea
-  const renderHTML = (text: string) => {
-    return text.split('\n').map((line, i) => (
-      <React.Fragment key={i}>
-        <div dangerouslySetInnerHTML={{ __html: line }} />
-        {i !== text.split('\n').length - 1 && <br />}
-      </React.Fragment>
-    ));
-  };
 
   // Obtenemos el array de párrafos directamente desde las traducciones
   const paragraphs = t('about.paragraph', { returnObjects: true }) as Array<{
@@ -29,8 +20,8 @@ const About: React.FC = () => {
   // Mapeamos los párrafos a los objetos que necesita AboutSection
   // y preparamos el contenido HTML para ser renderizado
   const aboutParagraphs = paragraphs.map((paragraph, index) => ({
-    title: renderHTML(paragraph.title),
-    description: renderHTML(paragraph.description),
+    title: paragraph.title,
+    description: paragraph.description,
     icon: paragraph.icon || ["🖥️", "🤖", "👨‍🏫", "❤️", "👥", "🚀", "📚"][index % 7] || "✨",
     delay: 0.2 + (index * 0.1),
   }));
@@ -53,7 +44,7 @@ const About: React.FC = () => {
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-            {aboutParagraphs.map((item, idx) => (
+            {aboutParagraphs.slice(0, 4).map((item, idx) => (
               <AboutSection
                 key={idx}
                 title={item.title}
@@ -63,11 +54,35 @@ const About: React.FC = () => {
               />
             ))}
           </div>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center gap-4 mt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
+            >
+              <Button
+                component={RouterLink}
+                to="/sobre-mi"
+                variant="outlined"
+                size="large"
+                endIcon={<ArrowRight className="w-5 h-5" />}
+                sx={{
+                  borderColor: '#00AAFF',
+                  color: '#00AAFF',
+                  fontWeight: 600,
+                  '&:hover': {
+                    borderColor: '#0088CC',
+                    backgroundColor: 'rgba(0, 170, 255, 0.1)',
+                  },
+                }}
+              >
+                {t('buttons.more')}
+              </Button>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
             >
               <Button
               variant="contained"

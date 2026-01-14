@@ -12,7 +12,10 @@ import EditPost from '../pages/Blog/EditPost'
 import NewPost from '../pages/Blog/NewPost'
 import WebinarWeb from '../pages/LandingPages/WebinarWeb'
 import MarketingIA from '../pages/Courses/MarketingIA'
-import DLauncerGPT from '../pages/GPTs/DigitalLaunch'
+import DLauncerGPT from '../pages/Apps/DigitalLaunch'
+import KodaApp from '../pages/Apps/KodaApp'
+import TributosCo from '../pages/Apps/TributosCo'
+import AboutMePage from '../pages/AboutMe'
 import PolicyPrivacy from "../pages/PrivacyPolicy"
 import ErrorPage from '../pages/ErrorPage'
 
@@ -49,6 +52,10 @@ export const router: RouteObject[] = [
                 path: "signup",
                 element: <Signup />
             },
+            {
+                path: "sobre-mi",
+                element: <AboutMePage />
+            },
         ]
     },
     {
@@ -76,6 +83,14 @@ export const router: RouteObject[] = [
     {
         path: "webinar-marketing-ia",
         element: <WebinarWeb />
+    },
+    {
+        path: "koda-app",
+        element: <KodaApp />
+    },
+    {
+        path: "tributos-co",
+        element: <TributosCo />
     },
     {
         path: "privacy-policy",

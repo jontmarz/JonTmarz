@@ -11,8 +11,8 @@ const Contact: React.FC = () => {
   const getLocalizedUrl = () => {
     const language = i18n.language as keyof typeof urls
     const urls: { [key: string]: string } = {
-      en: 'https://drive.google.com/file/d/122zz99P_ru9r18zKYXITbYmyZHqxmQe1/view?usp=drive_link',
-      es: 'https://drive.google.com/file/d/12K11GAUMqTA_X0nIYBwCcCETVRHhvVqe/view?usp=drive_link'
+      en: 'https://drive.google.com/file/d/11F85WxWcBnLEKyrAgu1m9Clwl4JJ5Flz/view?usp=sharing',
+      es: 'https://drive.google.com/file/d/1H6lnQ0rG45rKwTLos-WTJv1_gsHbDNwm/view?usp=sharing',
     }
 
     return urls[language] || urls['en']
@@ -76,7 +76,27 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img src={jonTmarz} alt="Contact" className="w-full h-auto" />
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: { xs: '80%', md: '70%' },
+                    mx: 'auto',
+                    padding: '4px',
+                    background: 'linear-gradient(270deg, #f5f5f5 0%, #c0c0c0 100%)',
+                    borderRadius: '50%',
+                  }}
+                >
+                  <img 
+                  src={jonTmarz} 
+                  alt="Contact" 
+                  style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '50%',
+                  display: 'block'
+                  }}
+                />
+                </Box>
             </motion.div>
             <Box sx={{ width:{xs: '80%', md: '70%'}, mx: 'auto', textAlign: 'center', mt: '2em'}}>
               <Typography component='p' sx={{mb: '1em', fontWeight: 'bold'}}>{t('contact.book')}</Typography>

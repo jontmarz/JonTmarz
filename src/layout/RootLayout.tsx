@@ -16,6 +16,8 @@ const RootLayout: React.FC = () => {
                 return 'miaCourse';
             case location.pathname.startsWith('/digital-launcher-gpt'):
                 return 'gtpLDigital';
+            case location.pathname.startsWith('/sobre-mi'):
+                return 'aboutMe';
             default:
                 return 'default';
         }

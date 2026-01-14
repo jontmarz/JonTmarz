@@ -4,8 +4,8 @@ import { useInView } from 'react-intersection-observer'
 import { Typography } from '@mui/material'
 
 interface AboutSectionProps {
-  title: string;
-  description: string;
+  title: string | React.ReactNode;
+  description: string | React.ReactNode;
   icon: string;
   delay: number;
 }
@@ -26,10 +26,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({ title, description, icon, d
     >
       <Typography variant="h6" className="flex items-center gap-2 mb-2 text-secondary font-kanit">
         <span className="text-2xl">{icon}</span>
-        {title}
+        <span dangerouslySetInnerHTML={{ __html: typeof title === 'string' ? title : '' }} />
       </Typography>
       <Typography variant="body1" className="text-tertiary font-montserrat" style={{ marginLeft: '1em', marginRight: '1em' }}>
-        {description}
+        <span dangerouslySetInnerHTML={{ __html: typeof description === 'string' ? description : '' }} />
       </Typography>
     </motion.div>
   );
