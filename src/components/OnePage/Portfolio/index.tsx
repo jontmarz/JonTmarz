@@ -290,7 +290,7 @@ const Portfolio: React.FC = () => {
               startIcon={<CalendarSearch className="w-5 h-5" />}
               className="btn-primary"
               sx={{ mt: '2em' }}
-              href="https://calendly.com/jontmarz/30min?back=1"
+              href={import.meta.env.VITE_CALENDLY_URL}
               target="_blank"
               >
               {t('buttons.bookCall')}

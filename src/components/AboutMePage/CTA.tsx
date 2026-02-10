@@ -49,7 +49,7 @@ const CTA: React.FC = () => {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             >
                                 <Button
-                                    href="https://calendly.com/jontmarz/30min?back=1"
+                                    href={import.meta.env.VITE_CALENDLY_URL}
                                     target="_blank"
                                     variant="contained"
                                     size="large"
