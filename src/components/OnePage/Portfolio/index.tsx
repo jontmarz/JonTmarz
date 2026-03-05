@@ -21,7 +21,6 @@ const Portfolio: React.FC = () => {
 
   const projects: Project[] = [
     {
-      id: 1,
       year: 2021,
       title: t('portfolio.websites.arrigui.title'),
       description: t('portfolio.websites.arrigui.description'),
@@ -31,7 +30,6 @@ const Portfolio: React.FC = () => {
       url: 'https://arrigui.com/'
     },
     {
-      id: 2,
       year: 2021,
       title: t('portfolio.websites.ceniflores.title'),
       description: t('portfolio.websites.ceniflores.description'),
@@ -41,7 +39,6 @@ const Portfolio: React.FC = () => {
       url: 'https://ceniflores.org/'
     },
     {
-      id: 3,
       year: 2021,
       title: t('portfolio.websites.fresar.title'),
       description: t('portfolio.websites.fresar.description'),
@@ -51,7 +48,6 @@ const Portfolio: React.FC = () => {
       url: 'https://fresaringenieros.co/'
     },
     {
-      id: 4,
       year: 2022,
       title: t('portfolio.websites.lecafe.title'),
       description: t('portfolio.websites.lecafe.description'),
@@ -61,7 +57,6 @@ const Portfolio: React.FC = () => {
       url: 'https://lecaferd.com.do/'
     },
     {
-      id: 5,
       year: 2022,
       title: t('portfolio.websites.mandolina.title'),
       description: t('portfolio.websites.mandolina.description'),
@@ -71,7 +66,6 @@ const Portfolio: React.FC = () => {
       url: 'https://mandolina.com/'
     },
     {
-      id: 6,
       year: 2023,
       title: t('portfolio.websites.vinali.title'),
       category: ['WordPress'],
@@ -81,7 +75,6 @@ const Portfolio: React.FC = () => {
       url: 'https://vinaligroup.com/'
     },
     {
-      id: 7,
       year: 2023,
       title: t('portfolio.websites.tco.title'),
       description: t('portfolio.websites.tco.description'),
@@ -91,27 +84,24 @@ const Portfolio: React.FC = () => {
       url: 'https://treecareoffice.com/'
     },
     {
-      id: 8,
       year: 2023,
       title: t('portfolio.websites.vinaliCalc.title'),
       category: ['VueJS'],
       description: t('portfolio.websites.vinaliCalc.description'),
       technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
       image: images['Savings-Calculator-Vinali-Group.webp'],
-      url: 'https://vinaligroup.com/'
+      url: 'https://calculator.vinaligroup.com/'
     },
     {
-      id: 9,
       year: 2023,
       title: t('portfolio.websites.tcoCalc.title'),
       description: t('portfolio.websites.tcoCalc.description'),
       category: ['VueJS'],
       technologies: ['WordPress', 'PHP', 'JavaScript', 'VueJS'],
       image: images['Savings-Calculator-Tree-Care.webp'],
-      url: 'https://treecareoffice.com/'
+      url: 'https://calculator.treecareoffice.com/'
     },
     {
-      id: 10,
       year: 2023,
       title: t('portfolio.websites.holbie.title'),
       description: t('portfolio.websites.holbie.description'),
@@ -121,7 +111,6 @@ const Portfolio: React.FC = () => {
       url: 'https://holisticbillingservices.com/'
     },
     {
-      id: 11,
       year: 2023,
       title: t('portfolio.websites.ncg.title'),
       description: t('portfolio.websites.ncg.description'),
@@ -131,27 +120,24 @@ const Portfolio: React.FC = () => {
       url: 'https://www.ncgmedical.com/'
     },
     {
-      id: 12,
       year: 2024,
       title: t('portfolio.websites.taxpert.title'),
       description: t('portfolio.websites.taxpert.description'),
       category: ['WordPress'],
       technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Taxpert-Strategies.webp'],
-      url: 'https://samuraiseb.org/'
+      url: 'https://taxpertnow.com/'
     },
     {
-      id: 13,
       year: 2024,
       title: t('portfolio.websites.acroskating.title'),
       description: t('portfolio.websites.taxpert.description'),
       category: ['WordPress'],
       technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
       image: images['Samurai-Seb.webp'],
-      url: 'https://taxpertnow.com/'
+      url: 'https://samuraiseb.org/'
     },
     {
-      id: 14,
       year: 2024,
       title: t('portfolio.websites.netvin.title'),
       description: t('portfolio.websites.netvin.description'),
@@ -161,7 +147,6 @@ const Portfolio: React.FC = () => {
       url: 'https://netvin.co/'
     },
     {
-      id: 15,
       year: 2024,
       title: t('portfolio.websites.rcm.title'),
       description: t('portfolio.websites.rcm.description'),
@@ -171,7 +156,6 @@ const Portfolio: React.FC = () => {
       url: 'https://vinalircm.com/'
     },
     {
-      id: 16,
       year: 2024,
       title: t('portfolio.apps.researchpro.title'),
       description: t('portfolio.apps.researchpro.description'),
@@ -181,7 +165,6 @@ const Portfolio: React.FC = () => {
       url: ''
     },
     {
-      id: 17,
       year: 2024,
       title: t('portfolio.websites.jontmarz.title'),
       description: t('portfolio.websites.jontmarz.description'),
@@ -191,17 +174,6 @@ const Portfolio: React.FC = () => {
       url: 'https://jontmarz.com/'
     },
     {
-      id: 18,
-      year: 2025,
-      title: t('portfolio.websites.iacero.title'),
-      description: t('portfolio.websites.iacero.description'),
-      category: ['WordPress'],
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'OpenAI', 'AI Automation', 'Elementor'],
-      image: images['IA-Desde-Cero.webp'],
-      url: 'https://iadesdecero.com/'
-    },
-    {
-      id: 19,
       year: 2025,
       title: t('portfolio.websites.luckyhive.title'),
       description: t('portfolio.websites.luckyhive.description'),
