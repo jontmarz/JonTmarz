@@ -182,6 +182,15 @@ const Portfolio: React.FC = () => {
       image: images['LuckyHive.webp'],
       url: 'https://luckyhive.jontmarz.com/'
     },
+    {
+      year: 2026,
+      title: t('portfolio.websites.workana.title'),
+      description: t('portfolio.websites.workana.description'),
+      category: ['WordPress'],
+      technologies: ['WordPress', 'PHP', 'JavaScript', 'Oxygen Builder'],
+      image: images['Workana.webp'],
+      url: 'https://luckyhive.jontmarz.com/'
+    },
   ];
 
   const categories = useMemo(() => {

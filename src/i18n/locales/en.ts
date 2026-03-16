@@ -156,6 +156,10 @@ export default {
         title: "Lucky Hive",
         description: "Architecture, Development, and Implementation of a gambling game with instant prizes, using modern web technologies and advanced security practices."
       },
+      workana: {
+        title: "Workana",
+        description: "Workana Accelerator landing page built in WordPress using custom CPTs and Oxygen Builder. Highlights program benefits and costs with responsive design and SEO optimization."
+      },
     },
     apps: {
       researchpro: {

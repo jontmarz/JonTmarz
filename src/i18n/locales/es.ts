@@ -156,6 +156,10 @@ export default {
         title: "La colmena de la suerte",
         description: "Arquitectura, desarrollo e implementación de juego de azar con premios instantáneos, utilizando tecnologías web modernas y prácticas de seguridad avanzadas."
       },
+       workana: {
+        title: "Workana",
+        description: "Landing page del programa Accelerator de Workana, creada en WordPress con CPT personalizados y Oxygen Builder. Explica beneficios y costos con diseño responsive y optimización SEO."
+      },
     },
     apps: {
       researchpro: {
